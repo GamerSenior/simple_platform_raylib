@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c11 -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g  -rdynamic CMakeFiles/shapes_logo_raylib_anim.dir/shapes/shapes_logo_raylib_anim.c.o  -o shapes_logo_raylib_anim -lpthread ../src/libraylib.a ../src/external/glfw/src/libglfw3.a -lrt -lm -ldl -lX11 -lpthread -lm -lpthread -lGL -lGLU 

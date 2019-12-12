@@ -56,16 +56,73 @@ CMAKE_BINARY_DIR = /home/giovani/CLionProjects/simple_plataform_raylib/cmake-bui
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/giovani/clion-2019.3.1/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/giovani/clion-2019.3.1/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/giovani/clion-2019.3.1/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
-.PHONY : rebuild_cache/fast
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/giovani/clion-2019.3.1/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/giovani/clion-2019.3.1/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/giovani/clion-2019.3.1/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/giovani/clion-2019.3.1/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	/home/giovani/clion-2019.3.1/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+
+.PHONY : package/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	/home/giovani/clion-2019.3.1/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+
+.PHONY : package_source/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -77,6 +134,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/home/giovani/clion-2019.3.1/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,17 +179,1694 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named simple_plataform_raylib
+# Target rules for targets named simple_platform_raylib
 
 # Build rule for target.
-simple_plataform_raylib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 simple_plataform_raylib
-.PHONY : simple_plataform_raylib
+simple_platform_raylib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simple_platform_raylib
+.PHONY : simple_platform_raylib
 
 # fast build rule for target.
-simple_plataform_raylib/fast:
-	$(MAKE) -f CMakeFiles/simple_plataform_raylib.dir/build.make CMakeFiles/simple_plataform_raylib.dir/build
-.PHONY : simple_plataform_raylib/fast
+simple_platform_raylib/fast:
+	$(MAKE) -f CMakeFiles/simple_platform_raylib.dir/build.make CMakeFiles/simple_platform_raylib.dir/build
+.PHONY : simple_platform_raylib/fast
+
+#=============================================================================
+# Target rules for targets named raylib_static
+
+# Build rule for target.
+raylib_static: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 raylib_static
+.PHONY : raylib_static
+
+# fast build rule for target.
+raylib_static/fast:
+	$(MAKE) -f vendor/raylib/src/CMakeFiles/raylib_static.dir/build.make vendor/raylib/src/CMakeFiles/raylib_static.dir/build
+.PHONY : raylib_static/fast
+
+#=============================================================================
+# Target rules for targets named glfw_objlib
+
+# Build rule for target.
+glfw_objlib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glfw_objlib
+.PHONY : glfw_objlib
+
+# fast build rule for target.
+glfw_objlib/fast:
+	$(MAKE) -f vendor/raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/build.make vendor/raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/build
+.PHONY : glfw_objlib/fast
+
+#=============================================================================
+# Target rules for targets named glfw
+
+# Build rule for target.
+glfw: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glfw
+.PHONY : glfw
+
+# fast build rule for target.
+glfw/fast:
+	$(MAKE) -f vendor/raylib/src/external/glfw/src/CMakeFiles/glfw.dir/build.make vendor/raylib/src/external/glfw/src/CMakeFiles/glfw.dir/build
+.PHONY : glfw/fast
+
+#=============================================================================
+# Target rules for targets named physics_restitution
+
+# Build rule for target.
+physics_restitution: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 physics_restitution
+.PHONY : physics_restitution
+
+# fast build rule for target.
+physics_restitution/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/physics_restitution.dir/build.make vendor/raylib/examples/CMakeFiles/physics_restitution.dir/build
+.PHONY : physics_restitution/fast
+
+#=============================================================================
+# Target rules for targets named physics_demo
+
+# Build rule for target.
+physics_demo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 physics_demo
+.PHONY : physics_demo
+
+# fast build rule for target.
+physics_demo/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/physics_demo.dir/build.make vendor/raylib/examples/CMakeFiles/physics_demo.dir/build
+.PHONY : physics_demo/fast
+
+#=============================================================================
+# Target rules for targets named textures_to_image
+
+# Build rule for target.
+textures_to_image: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 textures_to_image
+.PHONY : textures_to_image
+
+# fast build rule for target.
+textures_to_image/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/textures_to_image.dir/build.make vendor/raylib/examples/CMakeFiles/textures_to_image.dir/build
+.PHONY : textures_to_image/fast
+
+#=============================================================================
+# Target rules for targets named textures_sprite_explosion
+
+# Build rule for target.
+textures_sprite_explosion: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 textures_sprite_explosion
+.PHONY : textures_sprite_explosion
+
+# fast build rule for target.
+textures_sprite_explosion/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/textures_sprite_explosion.dir/build.make vendor/raylib/examples/CMakeFiles/textures_sprite_explosion.dir/build
+.PHONY : textures_sprite_explosion/fast
+
+#=============================================================================
+# Target rules for targets named textures_rectangle
+
+# Build rule for target.
+textures_rectangle: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 textures_rectangle
+.PHONY : textures_rectangle
+
+# fast build rule for target.
+textures_rectangle/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/textures_rectangle.dir/build.make vendor/raylib/examples/CMakeFiles/textures_rectangle.dir/build
+.PHONY : textures_rectangle/fast
+
+#=============================================================================
+# Target rules for targets named textures_raw_data
+
+# Build rule for target.
+textures_raw_data: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 textures_raw_data
+.PHONY : textures_raw_data
+
+# fast build rule for target.
+textures_raw_data/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/textures_raw_data.dir/build.make vendor/raylib/examples/CMakeFiles/textures_raw_data.dir/build
+.PHONY : textures_raw_data/fast
+
+#=============================================================================
+# Target rules for targets named textures_particles_blending
+
+# Build rule for target.
+textures_particles_blending: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 textures_particles_blending
+.PHONY : textures_particles_blending
+
+# fast build rule for target.
+textures_particles_blending/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/textures_particles_blending.dir/build.make vendor/raylib/examples/CMakeFiles/textures_particles_blending.dir/build
+.PHONY : textures_particles_blending/fast
+
+#=============================================================================
+# Target rules for targets named textures_npatch_drawing
+
+# Build rule for target.
+textures_npatch_drawing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 textures_npatch_drawing
+.PHONY : textures_npatch_drawing
+
+# fast build rule for target.
+textures_npatch_drawing/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/textures_npatch_drawing.dir/build.make vendor/raylib/examples/CMakeFiles/textures_npatch_drawing.dir/build
+.PHONY : textures_npatch_drawing/fast
+
+#=============================================================================
+# Target rules for targets named textures_mouse_painting
+
+# Build rule for target.
+textures_mouse_painting: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 textures_mouse_painting
+.PHONY : textures_mouse_painting
+
+# fast build rule for target.
+textures_mouse_painting/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/textures_mouse_painting.dir/build.make vendor/raylib/examples/CMakeFiles/textures_mouse_painting.dir/build
+.PHONY : textures_mouse_painting/fast
+
+#=============================================================================
+# Target rules for targets named textures_logo_raylib
+
+# Build rule for target.
+textures_logo_raylib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 textures_logo_raylib
+.PHONY : textures_logo_raylib
+
+# fast build rule for target.
+textures_logo_raylib/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/textures_logo_raylib.dir/build.make vendor/raylib/examples/CMakeFiles/textures_logo_raylib.dir/build
+.PHONY : textures_logo_raylib/fast
+
+#=============================================================================
+# Target rules for targets named textures_image_processing
+
+# Build rule for target.
+textures_image_processing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 textures_image_processing
+.PHONY : textures_image_processing
+
+# fast build rule for target.
+textures_image_processing/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/textures_image_processing.dir/build.make vendor/raylib/examples/CMakeFiles/textures_image_processing.dir/build
+.PHONY : textures_image_processing/fast
+
+#=============================================================================
+# Target rules for targets named textures_image_loading
+
+# Build rule for target.
+textures_image_loading: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 textures_image_loading
+.PHONY : textures_image_loading
+
+# fast build rule for target.
+textures_image_loading/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/textures_image_loading.dir/build.make vendor/raylib/examples/CMakeFiles/textures_image_loading.dir/build
+.PHONY : textures_image_loading/fast
+
+#=============================================================================
+# Target rules for targets named textures_image_generation
+
+# Build rule for target.
+textures_image_generation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 textures_image_generation
+.PHONY : textures_image_generation
+
+# fast build rule for target.
+textures_image_generation/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/textures_image_generation.dir/build.make vendor/raylib/examples/CMakeFiles/textures_image_generation.dir/build
+.PHONY : textures_image_generation/fast
+
+#=============================================================================
+# Target rules for targets named textures_image_drawing
+
+# Build rule for target.
+textures_image_drawing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 textures_image_drawing
+.PHONY : textures_image_drawing
+
+# fast build rule for target.
+textures_image_drawing/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/textures_image_drawing.dir/build.make vendor/raylib/examples/CMakeFiles/textures_image_drawing.dir/build
+.PHONY : textures_image_drawing/fast
+
+#=============================================================================
+# Target rules for targets named textures_background_scrolling
+
+# Build rule for target.
+textures_background_scrolling: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 textures_background_scrolling
+.PHONY : textures_background_scrolling
+
+# fast build rule for target.
+textures_background_scrolling/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/textures_background_scrolling.dir/build.make vendor/raylib/examples/CMakeFiles/textures_background_scrolling.dir/build
+.PHONY : textures_background_scrolling/fast
+
+#=============================================================================
+# Target rules for targets named text_rectangle_bounds
+
+# Build rule for target.
+text_rectangle_bounds: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 text_rectangle_bounds
+.PHONY : text_rectangle_bounds
+
+# fast build rule for target.
+text_rectangle_bounds/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/text_rectangle_bounds.dir/build.make vendor/raylib/examples/CMakeFiles/text_rectangle_bounds.dir/build
+.PHONY : text_rectangle_bounds/fast
+
+#=============================================================================
+# Target rules for targets named text_raylib_fonts
+
+# Build rule for target.
+text_raylib_fonts: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 text_raylib_fonts
+.PHONY : text_raylib_fonts
+
+# fast build rule for target.
+text_raylib_fonts/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/text_raylib_fonts.dir/build.make vendor/raylib/examples/CMakeFiles/text_raylib_fonts.dir/build
+.PHONY : text_raylib_fonts/fast
+
+#=============================================================================
+# Target rules for targets named text_input_box
+
+# Build rule for target.
+text_input_box: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 text_input_box
+.PHONY : text_input_box
+
+# fast build rule for target.
+text_input_box/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/text_input_box.dir/build.make vendor/raylib/examples/CMakeFiles/text_input_box.dir/build
+.PHONY : text_input_box/fast
+
+#=============================================================================
+# Target rules for targets named text_format_text
+
+# Build rule for target.
+text_format_text: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 text_format_text
+.PHONY : text_format_text
+
+# fast build rule for target.
+text_format_text/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/text_format_text.dir/build.make vendor/raylib/examples/CMakeFiles/text_format_text.dir/build
+.PHONY : text_format_text/fast
+
+#=============================================================================
+# Target rules for targets named text_font_sdf
+
+# Build rule for target.
+text_font_sdf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 text_font_sdf
+.PHONY : text_font_sdf
+
+# fast build rule for target.
+text_font_sdf/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/text_font_sdf.dir/build.make vendor/raylib/examples/CMakeFiles/text_font_sdf.dir/build
+.PHONY : text_font_sdf/fast
+
+#=============================================================================
+# Target rules for targets named models_loading
+
+# Build rule for target.
+models_loading: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 models_loading
+.PHONY : models_loading
+
+# fast build rule for target.
+models_loading/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/models_loading.dir/build.make vendor/raylib/examples/CMakeFiles/models_loading.dir/build
+.PHONY : models_loading/fast
+
+#=============================================================================
+# Target rules for targets named audio_raw_stream
+
+# Build rule for target.
+audio_raw_stream: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_raw_stream
+.PHONY : audio_raw_stream
+
+# fast build rule for target.
+audio_raw_stream/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/audio_raw_stream.dir/build.make vendor/raylib/examples/CMakeFiles/audio_raw_stream.dir/build
+.PHONY : audio_raw_stream/fast
+
+#=============================================================================
+# Target rules for targets named models_first_person_maze
+
+# Build rule for target.
+models_first_person_maze: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 models_first_person_maze
+.PHONY : models_first_person_maze
+
+# fast build rule for target.
+models_first_person_maze/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/models_first_person_maze.dir/build.make vendor/raylib/examples/CMakeFiles/models_first_person_maze.dir/build
+.PHONY : models_first_person_maze/fast
+
+#=============================================================================
+# Target rules for targets named shaders_raymarching
+
+# Build rule for target.
+shaders_raymarching: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shaders_raymarching
+.PHONY : shaders_raymarching
+
+# fast build rule for target.
+shaders_raymarching/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shaders_raymarching.dir/build.make vendor/raylib/examples/CMakeFiles/shaders_raymarching.dir/build
+.PHONY : shaders_raymarching/fast
+
+#=============================================================================
+# Target rules for targets named core_3d_camera_free
+
+# Build rule for target.
+core_3d_camera_free: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_3d_camera_free
+.PHONY : core_3d_camera_free
+
+# fast build rule for target.
+core_3d_camera_free/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_3d_camera_free.dir/build.make vendor/raylib/examples/CMakeFiles/core_3d_camera_free.dir/build
+.PHONY : core_3d_camera_free/fast
+
+#=============================================================================
+# Target rules for targets named core_world_screen
+
+# Build rule for target.
+core_world_screen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_world_screen
+.PHONY : core_world_screen
+
+# fast build rule for target.
+core_world_screen/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_world_screen.dir/build.make vendor/raylib/examples/CMakeFiles/core_world_screen.dir/build
+.PHONY : core_world_screen/fast
+
+#=============================================================================
+# Target rules for targets named models_mesh_picking
+
+# Build rule for target.
+models_mesh_picking: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 models_mesh_picking
+.PHONY : models_mesh_picking
+
+# fast build rule for target.
+models_mesh_picking/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/models_mesh_picking.dir/build.make vendor/raylib/examples/CMakeFiles/models_mesh_picking.dir/build
+.PHONY : models_mesh_picking/fast
+
+#=============================================================================
+# Target rules for targets named textures_sprite_button
+
+# Build rule for target.
+textures_sprite_button: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 textures_sprite_button
+.PHONY : textures_sprite_button
+
+# fast build rule for target.
+textures_sprite_button/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/textures_sprite_button.dir/build.make vendor/raylib/examples/CMakeFiles/textures_sprite_button.dir/build
+.PHONY : textures_sprite_button/fast
+
+#=============================================================================
+# Target rules for targets named models_billboard
+
+# Build rule for target.
+models_billboard: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 models_billboard
+.PHONY : models_billboard
+
+# fast build rule for target.
+models_billboard/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/models_billboard.dir/build.make vendor/raylib/examples/CMakeFiles/models_billboard.dir/build
+.PHONY : models_billboard/fast
+
+#=============================================================================
+# Target rules for targets named textures_srcrec_dstrec
+
+# Build rule for target.
+textures_srcrec_dstrec: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 textures_srcrec_dstrec
+.PHONY : textures_srcrec_dstrec
+
+# fast build rule for target.
+textures_srcrec_dstrec/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/textures_srcrec_dstrec.dir/build.make vendor/raylib/examples/CMakeFiles/textures_srcrec_dstrec.dir/build
+.PHONY : textures_srcrec_dstrec/fast
+
+#=============================================================================
+# Target rules for targets named textures_image_text
+
+# Build rule for target.
+textures_image_text: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 textures_image_text
+.PHONY : textures_image_text
+
+# fast build rule for target.
+textures_image_text/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/textures_image_text.dir/build.make vendor/raylib/examples/CMakeFiles/textures_image_text.dir/build
+.PHONY : textures_image_text/fast
+
+#=============================================================================
+# Target rules for targets named models_yaw_pitch_roll
+
+# Build rule for target.
+models_yaw_pitch_roll: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 models_yaw_pitch_roll
+.PHONY : models_yaw_pitch_roll
+
+# fast build rule for target.
+models_yaw_pitch_roll/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/models_yaw_pitch_roll.dir/build.make vendor/raylib/examples/CMakeFiles/models_yaw_pitch_roll.dir/build
+.PHONY : models_yaw_pitch_roll/fast
+
+#=============================================================================
+# Target rules for targets named shaders_eratosthenes
+
+# Build rule for target.
+shaders_eratosthenes: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shaders_eratosthenes
+.PHONY : shaders_eratosthenes
+
+# fast build rule for target.
+shaders_eratosthenes/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shaders_eratosthenes.dir/build.make vendor/raylib/examples/CMakeFiles/shaders_eratosthenes.dir/build
+.PHONY : shaders_eratosthenes/fast
+
+#=============================================================================
+# Target rules for targets named core_window_letterbox
+
+# Build rule for target.
+core_window_letterbox: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_window_letterbox
+.PHONY : core_window_letterbox
+
+# fast build rule for target.
+core_window_letterbox/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_window_letterbox.dir/build.make vendor/raylib/examples/CMakeFiles/core_window_letterbox.dir/build
+.PHONY : core_window_letterbox/fast
+
+#=============================================================================
+# Target rules for targets named core_vr_simulator
+
+# Build rule for target.
+core_vr_simulator: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_vr_simulator
+.PHONY : core_vr_simulator
+
+# fast build rule for target.
+core_vr_simulator/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_vr_simulator.dir/build.make vendor/raylib/examples/CMakeFiles/core_vr_simulator.dir/build
+.PHONY : core_vr_simulator/fast
+
+#=============================================================================
+# Target rules for targets named models_rlgl_solar_system
+
+# Build rule for target.
+models_rlgl_solar_system: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 models_rlgl_solar_system
+.PHONY : models_rlgl_solar_system
+
+# fast build rule for target.
+models_rlgl_solar_system/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/models_rlgl_solar_system.dir/build.make vendor/raylib/examples/CMakeFiles/models_rlgl_solar_system.dir/build
+.PHONY : models_rlgl_solar_system/fast
+
+#=============================================================================
+# Target rules for targets named core_scissor_test
+
+# Build rule for target.
+core_scissor_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_scissor_test
+.PHONY : core_scissor_test
+
+# fast build rule for target.
+core_scissor_test/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_scissor_test.dir/build.make vendor/raylib/examples/CMakeFiles/core_scissor_test.dir/build
+.PHONY : core_scissor_test/fast
+
+#=============================================================================
+# Target rules for targets named models_heightmap
+
+# Build rule for target.
+models_heightmap: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 models_heightmap
+.PHONY : models_heightmap
+
+# fast build rule for target.
+models_heightmap/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/models_heightmap.dir/build.make vendor/raylib/examples/CMakeFiles/models_heightmap.dir/build
+.PHONY : models_heightmap/fast
+
+#=============================================================================
+# Target rules for targets named core_random_values
+
+# Build rule for target.
+core_random_values: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_random_values
+.PHONY : core_random_values
+
+# fast build rule for target.
+core_random_values/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_random_values.dir/build.make vendor/raylib/examples/CMakeFiles/core_random_values.dir/build
+.PHONY : core_random_values/fast
+
+#=============================================================================
+# Target rules for targets named models_geometric_shapes
+
+# Build rule for target.
+models_geometric_shapes: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 models_geometric_shapes
+.PHONY : models_geometric_shapes
+
+# fast build rule for target.
+models_geometric_shapes/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/models_geometric_shapes.dir/build.make vendor/raylib/examples/CMakeFiles/models_geometric_shapes.dir/build
+.PHONY : models_geometric_shapes/fast
+
+#=============================================================================
+# Target rules for targets named shapes_draw_rectangle_rounded
+
+# Build rule for target.
+shapes_draw_rectangle_rounded: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shapes_draw_rectangle_rounded
+.PHONY : shapes_draw_rectangle_rounded
+
+# fast build rule for target.
+shapes_draw_rectangle_rounded/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shapes_draw_rectangle_rounded.dir/build.make vendor/raylib/examples/CMakeFiles/shapes_draw_rectangle_rounded.dir/build
+.PHONY : shapes_draw_rectangle_rounded/fast
+
+#=============================================================================
+# Target rules for targets named shaders_shapes_textures
+
+# Build rule for target.
+shaders_shapes_textures: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shaders_shapes_textures
+.PHONY : shaders_shapes_textures
+
+# fast build rule for target.
+shaders_shapes_textures/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shaders_shapes_textures.dir/build.make vendor/raylib/examples/CMakeFiles/shaders_shapes_textures.dir/build
+.PHONY : shaders_shapes_textures/fast
+
+#=============================================================================
+# Target rules for targets named core_loading_thread
+
+# Build rule for target.
+core_loading_thread: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_loading_thread
+.PHONY : core_loading_thread
+
+# fast build rule for target.
+core_loading_thread/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_loading_thread.dir/build.make vendor/raylib/examples/CMakeFiles/core_loading_thread.dir/build
+.PHONY : core_loading_thread/fast
+
+#=============================================================================
+# Target rules for targets named models_animation
+
+# Build rule for target.
+models_animation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 models_animation
+.PHONY : models_animation
+
+# fast build rule for target.
+models_animation/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/models_animation.dir/build.make vendor/raylib/examples/CMakeFiles/models_animation.dir/build
+.PHONY : models_animation/fast
+
+#=============================================================================
+# Target rules for targets named core_input_keys
+
+# Build rule for target.
+core_input_keys: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_input_keys
+.PHONY : core_input_keys
+
+# fast build rule for target.
+core_input_keys/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_input_keys.dir/build.make vendor/raylib/examples/CMakeFiles/core_input_keys.dir/build
+.PHONY : core_input_keys/fast
+
+#=============================================================================
+# Target rules for targets named core_input_gestures
+
+# Build rule for target.
+core_input_gestures: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_input_gestures
+.PHONY : core_input_gestures
+
+# fast build rule for target.
+core_input_gestures/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_input_gestures.dir/build.make vendor/raylib/examples/CMakeFiles/core_input_gestures.dir/build
+.PHONY : core_input_gestures/fast
+
+#=============================================================================
+# Target rules for targets named audio_sound_loading
+
+# Build rule for target.
+audio_sound_loading: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_sound_loading
+.PHONY : audio_sound_loading
+
+# fast build rule for target.
+audio_sound_loading/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/audio_sound_loading.dir/build.make vendor/raylib/examples/CMakeFiles/audio_sound_loading.dir/build
+.PHONY : audio_sound_loading/fast
+
+#=============================================================================
+# Target rules for targets named audio_module_playing
+
+# Build rule for target.
+audio_module_playing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_module_playing
+.PHONY : audio_module_playing
+
+# fast build rule for target.
+audio_module_playing/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/audio_module_playing.dir/build.make vendor/raylib/examples/CMakeFiles/audio_module_playing.dir/build
+.PHONY : audio_module_playing/fast
+
+#=============================================================================
+# Target rules for targets named core_input_multitouch
+
+# Build rule for target.
+core_input_multitouch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_input_multitouch
+.PHONY : core_input_multitouch
+
+# fast build rule for target.
+core_input_multitouch/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_input_multitouch.dir/build.make vendor/raylib/examples/CMakeFiles/core_input_multitouch.dir/build
+.PHONY : core_input_multitouch/fast
+
+#=============================================================================
+# Target rules for targets named text_writing_anim
+
+# Build rule for target.
+text_writing_anim: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 text_writing_anim
+.PHONY : text_writing_anim
+
+# fast build rule for target.
+text_writing_anim/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/text_writing_anim.dir/build.make vendor/raylib/examples/CMakeFiles/text_writing_anim.dir/build
+.PHONY : text_writing_anim/fast
+
+#=============================================================================
+# Target rules for targets named core_input_mouse
+
+# Build rule for target.
+core_input_mouse: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_input_mouse
+.PHONY : core_input_mouse
+
+# fast build rule for target.
+core_input_mouse/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_input_mouse.dir/build.make vendor/raylib/examples/CMakeFiles/core_input_mouse.dir/build
+.PHONY : core_input_mouse/fast
+
+#=============================================================================
+# Target rules for targets named audio_music_stream
+
+# Build rule for target.
+audio_music_stream: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_music_stream
+.PHONY : audio_music_stream
+
+# fast build rule for target.
+audio_music_stream/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/audio_music_stream.dir/build.make vendor/raylib/examples/CMakeFiles/audio_music_stream.dir/build
+.PHONY : audio_music_stream/fast
+
+#=============================================================================
+# Target rules for targets named core_input_gamepad
+
+# Build rule for target.
+core_input_gamepad: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_input_gamepad
+.PHONY : core_input_gamepad
+
+# fast build rule for target.
+core_input_gamepad/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_input_gamepad.dir/build.make vendor/raylib/examples/CMakeFiles/core_input_gamepad.dir/build
+.PHONY : core_input_gamepad/fast
+
+#=============================================================================
+# Target rules for targets named core_2d_camera
+
+# Build rule for target.
+core_2d_camera: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_2d_camera
+.PHONY : core_2d_camera
+
+# fast build rule for target.
+core_2d_camera/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_2d_camera.dir/build.make vendor/raylib/examples/CMakeFiles/core_2d_camera.dir/build
+.PHONY : core_2d_camera/fast
+
+#=============================================================================
+# Target rules for targets named core_2d_camera_platformer
+
+# Build rule for target.
+core_2d_camera_platformer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_2d_camera_platformer
+.PHONY : core_2d_camera_platformer
+
+# fast build rule for target.
+core_2d_camera_platformer/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_2d_camera_platformer.dir/build.make vendor/raylib/examples/CMakeFiles/core_2d_camera_platformer.dir/build
+.PHONY : core_2d_camera_platformer/fast
+
+#=============================================================================
+# Target rules for targets named physics_movement
+
+# Build rule for target.
+physics_movement: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 physics_movement
+.PHONY : physics_movement
+
+# fast build rule for target.
+physics_movement/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/physics_movement.dir/build.make vendor/raylib/examples/CMakeFiles/physics_movement.dir/build
+.PHONY : physics_movement/fast
+
+#=============================================================================
+# Target rules for targets named shaders_basic_lighting
+
+# Build rule for target.
+shaders_basic_lighting: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shaders_basic_lighting
+.PHONY : shaders_basic_lighting
+
+# fast build rule for target.
+shaders_basic_lighting/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shaders_basic_lighting.dir/build.make vendor/raylib/examples/CMakeFiles/shaders_basic_lighting.dir/build
+.PHONY : shaders_basic_lighting/fast
+
+#=============================================================================
+# Target rules for targets named audio_multichannel_sound
+
+# Build rule for target.
+audio_multichannel_sound: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_multichannel_sound
+.PHONY : audio_multichannel_sound
+
+# fast build rule for target.
+audio_multichannel_sound/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/audio_multichannel_sound.dir/build.make vendor/raylib/examples/CMakeFiles/audio_multichannel_sound.dir/build
+.PHONY : audio_multichannel_sound/fast
+
+#=============================================================================
+# Target rules for targets named core_3d_camera_mode
+
+# Build rule for target.
+core_3d_camera_mode: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_3d_camera_mode
+.PHONY : core_3d_camera_mode
+
+# fast build rule for target.
+core_3d_camera_mode/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_3d_camera_mode.dir/build.make vendor/raylib/examples/CMakeFiles/core_3d_camera_mode.dir/build
+.PHONY : core_3d_camera_mode/fast
+
+#=============================================================================
+# Target rules for targets named core_drop_files
+
+# Build rule for target.
+core_drop_files: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_drop_files
+.PHONY : core_drop_files
+
+# fast build rule for target.
+core_drop_files/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_drop_files.dir/build.make vendor/raylib/examples/CMakeFiles/core_drop_files.dir/build
+.PHONY : core_drop_files/fast
+
+#=============================================================================
+# Target rules for targets named text_font_loading
+
+# Build rule for target.
+text_font_loading: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 text_font_loading
+.PHONY : text_font_loading
+
+# fast build rule for target.
+text_font_loading/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/text_font_loading.dir/build.make vendor/raylib/examples/CMakeFiles/text_font_loading.dir/build
+.PHONY : text_font_loading/fast
+
+#=============================================================================
+# Target rules for targets named core_basic_window_web
+
+# Build rule for target.
+core_basic_window_web: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_basic_window_web
+.PHONY : core_basic_window_web
+
+# fast build rule for target.
+core_basic_window_web/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_basic_window_web.dir/build.make vendor/raylib/examples/CMakeFiles/core_basic_window_web.dir/build
+.PHONY : core_basic_window_web/fast
+
+#=============================================================================
+# Target rules for targets named models_box_collisions
+
+# Build rule for target.
+models_box_collisions: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 models_box_collisions
+.PHONY : models_box_collisions
+
+# fast build rule for target.
+models_box_collisions/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/models_box_collisions.dir/build.make vendor/raylib/examples/CMakeFiles/models_box_collisions.dir/build
+.PHONY : models_box_collisions/fast
+
+#=============================================================================
+# Target rules for targets named easings_testbed
+
+# Build rule for target.
+easings_testbed: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 easings_testbed
+.PHONY : easings_testbed
+
+# fast build rule for target.
+easings_testbed/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/easings_testbed.dir/build.make vendor/raylib/examples/CMakeFiles/easings_testbed.dir/build
+.PHONY : easings_testbed/fast
+
+#=============================================================================
+# Target rules for targets named textures_bunnymark
+
+# Build rule for target.
+textures_bunnymark: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 textures_bunnymark
+.PHONY : textures_bunnymark
+
+# fast build rule for target.
+textures_bunnymark/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/textures_bunnymark.dir/build.make vendor/raylib/examples/CMakeFiles/textures_bunnymark.dir/build
+.PHONY : textures_bunnymark/fast
+
+#=============================================================================
+# Target rules for targets named models_cubicmap
+
+# Build rule for target.
+models_cubicmap: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 models_cubicmap
+.PHONY : models_cubicmap
+
+# fast build rule for target.
+models_cubicmap/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/models_cubicmap.dir/build.make vendor/raylib/examples/CMakeFiles/models_cubicmap.dir/build
+.PHONY : models_cubicmap/fast
+
+#=============================================================================
+# Target rules for targets named text_font_filters
+
+# Build rule for target.
+text_font_filters: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 text_font_filters
+.PHONY : text_font_filters
+
+# fast build rule for target.
+text_font_filters/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/text_font_filters.dir/build.make vendor/raylib/examples/CMakeFiles/text_font_filters.dir/build
+.PHONY : text_font_filters/fast
+
+#=============================================================================
+# Target rules for targets named core_input_mouse_wheel
+
+# Build rule for target.
+core_input_mouse_wheel: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_input_mouse_wheel
+.PHONY : core_input_mouse_wheel
+
+# fast build rule for target.
+core_input_mouse_wheel/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_input_mouse_wheel.dir/build.make vendor/raylib/examples/CMakeFiles/core_input_mouse_wheel.dir/build
+.PHONY : core_input_mouse_wheel/fast
+
+#=============================================================================
+# Target rules for targets named rlgl_standalone
+
+# Build rule for target.
+rlgl_standalone: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rlgl_standalone
+.PHONY : rlgl_standalone
+
+# fast build rule for target.
+rlgl_standalone/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/rlgl_standalone.dir/build.make vendor/raylib/examples/CMakeFiles/rlgl_standalone.dir/build
+.PHONY : rlgl_standalone/fast
+
+#=============================================================================
+# Target rules for targets named shapes_rectangle_scaling
+
+# Build rule for target.
+shapes_rectangle_scaling: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shapes_rectangle_scaling
+.PHONY : shapes_rectangle_scaling
+
+# fast build rule for target.
+shapes_rectangle_scaling/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shapes_rectangle_scaling.dir/build.make vendor/raylib/examples/CMakeFiles/shapes_rectangle_scaling.dir/build
+.PHONY : shapes_rectangle_scaling/fast
+
+#=============================================================================
+# Target rules for targets named core_3d_picking
+
+# Build rule for target.
+core_3d_picking: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_3d_picking
+.PHONY : core_3d_picking
+
+# fast build rule for target.
+core_3d_picking/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_3d_picking.dir/build.make vendor/raylib/examples/CMakeFiles/core_3d_picking.dir/build
+.PHONY : core_3d_picking/fast
+
+#=============================================================================
+# Target rules for targets named shaders_texture_drawing
+
+# Build rule for target.
+shaders_texture_drawing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shaders_texture_drawing
+.PHONY : shaders_texture_drawing
+
+# fast build rule for target.
+shaders_texture_drawing/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shaders_texture_drawing.dir/build.make vendor/raylib/examples/CMakeFiles/shaders_texture_drawing.dir/build
+.PHONY : shaders_texture_drawing/fast
+
+#=============================================================================
+# Target rules for targets named shapes_easings_box_anim
+
+# Build rule for target.
+shapes_easings_box_anim: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shapes_easings_box_anim
+.PHONY : shapes_easings_box_anim
+
+# fast build rule for target.
+shapes_easings_box_anim/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shapes_easings_box_anim.dir/build.make vendor/raylib/examples/CMakeFiles/shapes_easings_box_anim.dir/build
+.PHONY : shapes_easings_box_anim/fast
+
+#=============================================================================
+# Target rules for targets named core_custom_logging
+
+# Build rule for target.
+core_custom_logging: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_custom_logging
+.PHONY : core_custom_logging
+
+# fast build rule for target.
+core_custom_logging/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_custom_logging.dir/build.make vendor/raylib/examples/CMakeFiles/core_custom_logging.dir/build
+.PHONY : core_custom_logging/fast
+
+#=============================================================================
+# Target rules for targets named core_basic_window
+
+# Build rule for target.
+core_basic_window: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_basic_window
+.PHONY : core_basic_window
+
+# fast build rule for target.
+core_basic_window/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_basic_window.dir/build.make vendor/raylib/examples/CMakeFiles/core_basic_window.dir/build
+.PHONY : core_basic_window/fast
+
+#=============================================================================
+# Target rules for targets named models_mesh_generation
+
+# Build rule for target.
+models_mesh_generation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 models_mesh_generation
+.PHONY : models_mesh_generation
+
+# fast build rule for target.
+models_mesh_generation/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/models_mesh_generation.dir/build.make vendor/raylib/examples/CMakeFiles/models_mesh_generation.dir/build
+.PHONY : models_mesh_generation/fast
+
+#=============================================================================
+# Target rules for targets named text_font_spritefont
+
+# Build rule for target.
+text_font_spritefont: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 text_font_spritefont
+.PHONY : text_font_spritefont
+
+# fast build rule for target.
+text_font_spritefont/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/text_font_spritefont.dir/build.make vendor/raylib/examples/CMakeFiles/text_font_spritefont.dir/build
+.PHONY : text_font_spritefont/fast
+
+#=============================================================================
+# Target rules for targets named shapes_lines_bezier
+
+# Build rule for target.
+shapes_lines_bezier: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shapes_lines_bezier
+.PHONY : shapes_lines_bezier
+
+# fast build rule for target.
+shapes_lines_bezier/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shapes_lines_bezier.dir/build.make vendor/raylib/examples/CMakeFiles/shapes_lines_bezier.dir/build
+.PHONY : shapes_lines_bezier/fast
+
+#=============================================================================
+# Target rules for targets named shapes_logo_raylib
+
+# Build rule for target.
+shapes_logo_raylib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shapes_logo_raylib
+.PHONY : shapes_logo_raylib
+
+# fast build rule for target.
+shapes_logo_raylib/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shapes_logo_raylib.dir/build.make vendor/raylib/examples/CMakeFiles/shapes_logo_raylib.dir/build
+.PHONY : shapes_logo_raylib/fast
+
+#=============================================================================
+# Target rules for targets named core_3d_camera_first_person
+
+# Build rule for target.
+core_3d_camera_first_person: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_3d_camera_first_person
+.PHONY : core_3d_camera_first_person
+
+# fast build rule for target.
+core_3d_camera_first_person/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_3d_camera_first_person.dir/build.make vendor/raylib/examples/CMakeFiles/core_3d_camera_first_person.dir/build
+.PHONY : core_3d_camera_first_person/fast
+
+#=============================================================================
+# Target rules for targets named models_orthographic_projection
+
+# Build rule for target.
+models_orthographic_projection: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 models_orthographic_projection
+.PHONY : models_orthographic_projection
+
+# fast build rule for target.
+models_orthographic_projection/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/models_orthographic_projection.dir/build.make vendor/raylib/examples/CMakeFiles/models_orthographic_projection.dir/build
+.PHONY : models_orthographic_projection/fast
+
+#=============================================================================
+# Target rules for targets named shaders_palette_switch
+
+# Build rule for target.
+shaders_palette_switch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shaders_palette_switch
+.PHONY : shaders_palette_switch
+
+# fast build rule for target.
+shaders_palette_switch/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shaders_palette_switch.dir/build.make vendor/raylib/examples/CMakeFiles/shaders_palette_switch.dir/build
+.PHONY : shaders_palette_switch/fast
+
+#=============================================================================
+# Target rules for targets named physics_shatter
+
+# Build rule for target.
+physics_shatter: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 physics_shatter
+.PHONY : physics_shatter
+
+# fast build rule for target.
+physics_shatter/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/physics_shatter.dir/build.make vendor/raylib/examples/CMakeFiles/physics_shatter.dir/build
+.PHONY : physics_shatter/fast
+
+#=============================================================================
+# Target rules for targets named physics_friction
+
+# Build rule for target.
+physics_friction: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 physics_friction
+.PHONY : physics_friction
+
+# fast build rule for target.
+physics_friction/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/physics_friction.dir/build.make vendor/raylib/examples/CMakeFiles/physics_friction.dir/build
+.PHONY : physics_friction/fast
+
+#=============================================================================
+# Target rules for targets named shapes_colors_palette
+
+# Build rule for target.
+shapes_colors_palette: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shapes_colors_palette
+.PHONY : shapes_colors_palette
+
+# fast build rule for target.
+shapes_colors_palette/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shapes_colors_palette.dir/build.make vendor/raylib/examples/CMakeFiles/shapes_colors_palette.dir/build
+.PHONY : shapes_colors_palette/fast
+
+#=============================================================================
+# Target rules for targets named models_rlgl_full_solar_system
+
+# Build rule for target.
+models_rlgl_full_solar_system: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 models_rlgl_full_solar_system
+.PHONY : models_rlgl_full_solar_system
+
+# fast build rule for target.
+models_rlgl_full_solar_system/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/models_rlgl_full_solar_system.dir/build.make vendor/raylib/examples/CMakeFiles/models_rlgl_full_solar_system.dir/build
+.PHONY : models_rlgl_full_solar_system/fast
+
+#=============================================================================
+# Target rules for targets named core_storage_values
+
+# Build rule for target.
+core_storage_values: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core_storage_values
+.PHONY : core_storage_values
+
+# fast build rule for target.
+core_storage_values/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/core_storage_values.dir/build.make vendor/raylib/examples/CMakeFiles/core_storage_values.dir/build
+.PHONY : core_storage_values/fast
+
+#=============================================================================
+# Target rules for targets named shaders_simple_mask
+
+# Build rule for target.
+shaders_simple_mask: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shaders_simple_mask
+.PHONY : shaders_simple_mask
+
+# fast build rule for target.
+shaders_simple_mask/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shaders_simple_mask.dir/build.make vendor/raylib/examples/CMakeFiles/shaders_simple_mask.dir/build
+.PHONY : shaders_simple_mask/fast
+
+#=============================================================================
+# Target rules for targets named models_waving_cubes
+
+# Build rule for target.
+models_waving_cubes: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 models_waving_cubes
+.PHONY : models_waving_cubes
+
+# fast build rule for target.
+models_waving_cubes/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/models_waving_cubes.dir/build.make vendor/raylib/examples/CMakeFiles/models_waving_cubes.dir/build
+.PHONY : models_waving_cubes/fast
+
+#=============================================================================
+# Target rules for targets named raudio_standalone
+
+# Build rule for target.
+raudio_standalone: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 raudio_standalone
+.PHONY : raudio_standalone
+
+# fast build rule for target.
+raudio_standalone/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/raudio_standalone.dir/build.make vendor/raylib/examples/CMakeFiles/raudio_standalone.dir/build
+.PHONY : raudio_standalone/fast
+
+#=============================================================================
+# Target rules for targets named models_solar_system
+
+# Build rule for target.
+models_solar_system: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 models_solar_system
+.PHONY : models_solar_system
+
+# fast build rule for target.
+models_solar_system/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/models_solar_system.dir/build.make vendor/raylib/examples/CMakeFiles/models_solar_system.dir/build
+.PHONY : models_solar_system/fast
+
+#=============================================================================
+# Target rules for targets named shaders_custom_uniform
+
+# Build rule for target.
+shaders_custom_uniform: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shaders_custom_uniform
+.PHONY : shaders_custom_uniform
+
+# fast build rule for target.
+shaders_custom_uniform/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shaders_custom_uniform.dir/build.make vendor/raylib/examples/CMakeFiles/shaders_custom_uniform.dir/build
+.PHONY : shaders_custom_uniform/fast
+
+#=============================================================================
+# Target rules for targets named shaders_fog
+
+# Build rule for target.
+shaders_fog: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shaders_fog
+.PHONY : shaders_fog
+
+# fast build rule for target.
+shaders_fog/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shaders_fog.dir/build.make vendor/raylib/examples/CMakeFiles/shaders_fog.dir/build
+.PHONY : shaders_fog/fast
+
+#=============================================================================
+# Target rules for targets named shaders_julia_set
+
+# Build rule for target.
+shaders_julia_set: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shaders_julia_set
+.PHONY : shaders_julia_set
+
+# fast build rule for target.
+shaders_julia_set/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shaders_julia_set.dir/build.make vendor/raylib/examples/CMakeFiles/shaders_julia_set.dir/build
+.PHONY : shaders_julia_set/fast
+
+#=============================================================================
+# Target rules for targets named models_material_pbr
+
+# Build rule for target.
+models_material_pbr: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 models_material_pbr
+.PHONY : models_material_pbr
+
+# fast build rule for target.
+models_material_pbr/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/models_material_pbr.dir/build.make vendor/raylib/examples/CMakeFiles/models_material_pbr.dir/build
+.PHONY : models_material_pbr/fast
+
+#=============================================================================
+# Target rules for targets named shaders_model_shader
+
+# Build rule for target.
+shaders_model_shader: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shaders_model_shader
+.PHONY : shaders_model_shader
+
+# fast build rule for target.
+shaders_model_shader/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shaders_model_shader.dir/build.make vendor/raylib/examples/CMakeFiles/shaders_model_shader.dir/build
+.PHONY : shaders_model_shader/fast
+
+#=============================================================================
+# Target rules for targets named shapes_draw_circle_sector
+
+# Build rule for target.
+shapes_draw_circle_sector: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shapes_draw_circle_sector
+.PHONY : shapes_draw_circle_sector
+
+# fast build rule for target.
+shapes_draw_circle_sector/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shapes_draw_circle_sector.dir/build.make vendor/raylib/examples/CMakeFiles/shapes_draw_circle_sector.dir/build
+.PHONY : shapes_draw_circle_sector/fast
+
+#=============================================================================
+# Target rules for targets named shaders_texture_waves
+
+# Build rule for target.
+shaders_texture_waves: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shaders_texture_waves
+.PHONY : shaders_texture_waves
+
+# fast build rule for target.
+shaders_texture_waves/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shaders_texture_waves.dir/build.make vendor/raylib/examples/CMakeFiles/shaders_texture_waves.dir/build
+.PHONY : shaders_texture_waves/fast
+
+#=============================================================================
+# Target rules for targets named models_skybox
+
+# Build rule for target.
+models_skybox: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 models_skybox
+.PHONY : models_skybox
+
+# fast build rule for target.
+models_skybox/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/models_skybox.dir/build.make vendor/raylib/examples/CMakeFiles/models_skybox.dir/build
+.PHONY : models_skybox/fast
+
+#=============================================================================
+# Target rules for targets named shaders_postprocessing
+
+# Build rule for target.
+shaders_postprocessing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shaders_postprocessing
+.PHONY : shaders_postprocessing
+
+# fast build rule for target.
+shaders_postprocessing/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shaders_postprocessing.dir/build.make vendor/raylib/examples/CMakeFiles/shaders_postprocessing.dir/build
+.PHONY : shaders_postprocessing/fast
+
+#=============================================================================
+# Target rules for targets named text_unicode
+
+# Build rule for target.
+text_unicode: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 text_unicode
+.PHONY : text_unicode
+
+# fast build rule for target.
+text_unicode/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/text_unicode.dir/build.make vendor/raylib/examples/CMakeFiles/text_unicode.dir/build
+.PHONY : text_unicode/fast
+
+#=============================================================================
+# Target rules for targets named shapes_bouncing_ball
+
+# Build rule for target.
+shapes_bouncing_ball: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shapes_bouncing_ball
+.PHONY : shapes_bouncing_ball
+
+# fast build rule for target.
+shapes_bouncing_ball/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shapes_bouncing_ball.dir/build.make vendor/raylib/examples/CMakeFiles/shapes_bouncing_ball.dir/build
+.PHONY : shapes_bouncing_ball/fast
+
+#=============================================================================
+# Target rules for targets named shapes_collision_area
+
+# Build rule for target.
+shapes_collision_area: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shapes_collision_area
+.PHONY : shapes_collision_area
+
+# fast build rule for target.
+shapes_collision_area/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shapes_collision_area.dir/build.make vendor/raylib/examples/CMakeFiles/shapes_collision_area.dir/build
+.PHONY : shapes_collision_area/fast
+
+#=============================================================================
+# Target rules for targets named shapes_draw_ring
+
+# Build rule for target.
+shapes_draw_ring: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shapes_draw_ring
+.PHONY : shapes_draw_ring
+
+# fast build rule for target.
+shapes_draw_ring/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shapes_draw_ring.dir/build.make vendor/raylib/examples/CMakeFiles/shapes_draw_ring.dir/build
+.PHONY : shapes_draw_ring/fast
+
+#=============================================================================
+# Target rules for targets named shapes_basic_shapes
+
+# Build rule for target.
+shapes_basic_shapes: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shapes_basic_shapes
+.PHONY : shapes_basic_shapes
+
+# fast build rule for target.
+shapes_basic_shapes/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shapes_basic_shapes.dir/build.make vendor/raylib/examples/CMakeFiles/shapes_basic_shapes.dir/build
+.PHONY : shapes_basic_shapes/fast
+
+#=============================================================================
+# Target rules for targets named shapes_easings_ball_anim
+
+# Build rule for target.
+shapes_easings_ball_anim: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shapes_easings_ball_anim
+.PHONY : shapes_easings_ball_anim
+
+# fast build rule for target.
+shapes_easings_ball_anim/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shapes_easings_ball_anim.dir/build.make vendor/raylib/examples/CMakeFiles/shapes_easings_ball_anim.dir/build
+.PHONY : shapes_easings_ball_anim/fast
+
+#=============================================================================
+# Target rules for targets named shapes_easings_rectangle_array
+
+# Build rule for target.
+shapes_easings_rectangle_array: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shapes_easings_rectangle_array
+.PHONY : shapes_easings_rectangle_array
+
+# fast build rule for target.
+shapes_easings_rectangle_array/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shapes_easings_rectangle_array.dir/build.make vendor/raylib/examples/CMakeFiles/shapes_easings_rectangle_array.dir/build
+.PHONY : shapes_easings_rectangle_array/fast
+
+#=============================================================================
+# Target rules for targets named shapes_following_eyes
+
+# Build rule for target.
+shapes_following_eyes: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shapes_following_eyes
+.PHONY : shapes_following_eyes
+
+# fast build rule for target.
+shapes_following_eyes/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shapes_following_eyes.dir/build.make vendor/raylib/examples/CMakeFiles/shapes_following_eyes.dir/build
+.PHONY : shapes_following_eyes/fast
+
+#=============================================================================
+# Target rules for targets named shapes_logo_raylib_anim
+
+# Build rule for target.
+shapes_logo_raylib_anim: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shapes_logo_raylib_anim
+.PHONY : shapes_logo_raylib_anim
+
+# fast build rule for target.
+shapes_logo_raylib_anim/fast:
+	$(MAKE) -f vendor/raylib/examples/CMakeFiles/shapes_logo_raylib_anim.dir/build.make vendor/raylib/examples/CMakeFiles/shapes_logo_raylib_anim.dir/build
+.PHONY : shapes_logo_raylib_anim/fast
+
+#=============================================================================
+# Target rules for targets named asteroids_survival
+
+# Build rule for target.
+asteroids_survival: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 asteroids_survival
+.PHONY : asteroids_survival
+
+# fast build rule for target.
+asteroids_survival/fast:
+	$(MAKE) -f vendor/raylib/games/CMakeFiles/asteroids_survival.dir/build.make vendor/raylib/games/CMakeFiles/asteroids_survival.dir/build
+.PHONY : asteroids_survival/fast
+
+#=============================================================================
+# Target rules for targets named floppy
+
+# Build rule for target.
+floppy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 floppy
+.PHONY : floppy
+
+# fast build rule for target.
+floppy/fast:
+	$(MAKE) -f vendor/raylib/games/CMakeFiles/floppy.dir/build.make vendor/raylib/games/CMakeFiles/floppy.dir/build
+.PHONY : floppy/fast
+
+#=============================================================================
+# Target rules for targets named arkanoid
+
+# Build rule for target.
+arkanoid: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 arkanoid
+.PHONY : arkanoid
+
+# fast build rule for target.
+arkanoid/fast:
+	$(MAKE) -f vendor/raylib/games/CMakeFiles/arkanoid.dir/build.make vendor/raylib/games/CMakeFiles/arkanoid.dir/build
+.PHONY : arkanoid/fast
+
+#=============================================================================
+# Target rules for targets named asteroids
+
+# Build rule for target.
+asteroids: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 asteroids
+.PHONY : asteroids
+
+# fast build rule for target.
+asteroids/fast:
+	$(MAKE) -f vendor/raylib/games/CMakeFiles/asteroids.dir/build.make vendor/raylib/games/CMakeFiles/asteroids.dir/build
+.PHONY : asteroids/fast
+
+#=============================================================================
+# Target rules for targets named space_invaders
+
+# Build rule for target.
+space_invaders: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 space_invaders
+.PHONY : space_invaders
+
+# fast build rule for target.
+space_invaders/fast:
+	$(MAKE) -f vendor/raylib/games/CMakeFiles/space_invaders.dir/build.make vendor/raylib/games/CMakeFiles/space_invaders.dir/build
+.PHONY : space_invaders/fast
+
+#=============================================================================
+# Target rules for targets named gorilas
+
+# Build rule for target.
+gorilas: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gorilas
+.PHONY : gorilas
+
+# fast build rule for target.
+gorilas/fast:
+	$(MAKE) -f vendor/raylib/games/CMakeFiles/gorilas.dir/build.make vendor/raylib/games/CMakeFiles/gorilas.dir/build
+.PHONY : gorilas/fast
+
+#=============================================================================
+# Target rules for targets named missile_commander
+
+# Build rule for target.
+missile_commander: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 missile_commander
+.PHONY : missile_commander
+
+# fast build rule for target.
+missile_commander/fast:
+	$(MAKE) -f vendor/raylib/games/CMakeFiles/missile_commander.dir/build.make vendor/raylib/games/CMakeFiles/missile_commander.dir/build
+.PHONY : missile_commander/fast
+
+#=============================================================================
+# Target rules for targets named pang
+
+# Build rule for target.
+pang: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pang
+.PHONY : pang
+
+# fast build rule for target.
+pang/fast:
+	$(MAKE) -f vendor/raylib/games/CMakeFiles/pang.dir/build.make vendor/raylib/games/CMakeFiles/pang.dir/build
+.PHONY : pang/fast
+
+#=============================================================================
+# Target rules for targets named tetris
+
+# Build rule for target.
+tetris: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tetris
+.PHONY : tetris
+
+# fast build rule for target.
+tetris/fast:
+	$(MAKE) -f vendor/raylib/games/CMakeFiles/tetris.dir/build.make vendor/raylib/games/CMakeFiles/tetris.dir/build
+.PHONY : tetris/fast
+
+#=============================================================================
+# Target rules for targets named gold_fever
+
+# Build rule for target.
+gold_fever: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gold_fever
+.PHONY : gold_fever
+
+# fast build rule for target.
+gold_fever/fast:
+	$(MAKE) -f vendor/raylib/games/CMakeFiles/gold_fever.dir/build.make vendor/raylib/games/CMakeFiles/gold_fever.dir/build
+.PHONY : gold_fever/fast
+
+#=============================================================================
+# Target rules for targets named snake
+
+# Build rule for target.
+snake: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 snake
+.PHONY : snake
+
+# fast build rule for target.
+snake/fast:
+	$(MAKE) -f vendor/raylib/games/CMakeFiles/snake.dir/build.make vendor/raylib/games/CMakeFiles/snake.dir/build
+.PHONY : snake/fast
+
+#=============================================================================
+# Target rules for targets named drturtle
+
+# Build rule for target.
+drturtle: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 drturtle
+.PHONY : drturtle
+
+# fast build rule for target.
+drturtle/fast:
+	$(MAKE) -f vendor/raylib/games/drturtle/CMakeFiles/drturtle.dir/build.make vendor/raylib/games/drturtle/CMakeFiles/drturtle.dir/build
+.PHONY : drturtle/fast
+
+#=============================================================================
+# Target rules for targets named just_do
+
+# Build rule for target.
+just_do: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 just_do
+.PHONY : just_do
+
+# fast build rule for target.
+just_do/fast:
+	$(MAKE) -f vendor/raylib/games/just_do/CMakeFiles/just_do.dir/build.make vendor/raylib/games/just_do/CMakeFiles/just_do.dir/build
+.PHONY : just_do/fast
+
+#=============================================================================
+# Target rules for targets named koala_seasons
+
+# Build rule for target.
+koala_seasons: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 koala_seasons
+.PHONY : koala_seasons
+
+# fast build rule for target.
+koala_seasons/fast:
+	$(MAKE) -f vendor/raylib/games/koala_seasons/CMakeFiles/koala_seasons.dir/build.make vendor/raylib/games/koala_seasons/CMakeFiles/koala_seasons.dir/build
+.PHONY : koala_seasons/fast
+
+#=============================================================================
+# Target rules for targets named light_my_ritual
+
+# Build rule for target.
+light_my_ritual: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 light_my_ritual
+.PHONY : light_my_ritual
+
+# fast build rule for target.
+light_my_ritual/fast:
+	$(MAKE) -f vendor/raylib/games/light_my_ritual/CMakeFiles/light_my_ritual.dir/build.make vendor/raylib/games/light_my_ritual/CMakeFiles/light_my_ritual.dir/build
+.PHONY : light_my_ritual/fast
+
+#=============================================================================
+# Target rules for targets named skully_escape
+
+# Build rule for target.
+skully_escape: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 skully_escape
+.PHONY : skully_escape
+
+# fast build rule for target.
+skully_escape/fast:
+	$(MAKE) -f vendor/raylib/games/skully_escape/CMakeFiles/skully_escape.dir/build.make vendor/raylib/games/skully_escape/CMakeFiles/skully_escape.dir/build
+.PHONY : skully_escape/fast
+
+#=============================================================================
+# Target rules for targets named wave_collector
+
+# Build rule for target.
+wave_collector: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wave_collector
+.PHONY : wave_collector
+
+# fast build rule for target.
+wave_collector/fast:
+	$(MAKE) -f vendor/raylib/games/wave_collector/CMakeFiles/wave_collector.dir/build.make vendor/raylib/games/wave_collector/CMakeFiles/wave_collector.dir/build
+.PHONY : wave_collector/fast
 
 main.o: main.c.o
 
@@ -129,7 +1874,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) -f CMakeFiles/simple_plataform_raylib.dir/build.make CMakeFiles/simple_plataform_raylib.dir/main.c.o
+	$(MAKE) -f CMakeFiles/simple_platform_raylib.dir/build.make CMakeFiles/simple_platform_raylib.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -138,7 +1883,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) -f CMakeFiles/simple_plataform_raylib.dir/build.make CMakeFiles/simple_plataform_raylib.dir/main.c.i
+	$(MAKE) -f CMakeFiles/simple_platform_raylib.dir/build.make CMakeFiles/simple_platform_raylib.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -147,7 +1892,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) -f CMakeFiles/simple_plataform_raylib.dir/build.make CMakeFiles/simple_plataform_raylib.dir/main.c.s
+	$(MAKE) -f CMakeFiles/simple_platform_raylib.dir/build.make CMakeFiles/simple_platform_raylib.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -156,9 +1901,144 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... simple_plataform_raylib"
+	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... install"
+	@echo "... package"
+	@echo "... package_source"
+	@echo "... simple_platform_raylib"
+	@echo "... list_install_components"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... raylib_static"
+	@echo "... glfw_objlib"
+	@echo "... glfw"
+	@echo "... physics_restitution"
+	@echo "... physics_demo"
+	@echo "... textures_to_image"
+	@echo "... textures_sprite_explosion"
+	@echo "... textures_rectangle"
+	@echo "... textures_raw_data"
+	@echo "... textures_particles_blending"
+	@echo "... textures_npatch_drawing"
+	@echo "... textures_mouse_painting"
+	@echo "... textures_logo_raylib"
+	@echo "... textures_image_processing"
+	@echo "... textures_image_loading"
+	@echo "... textures_image_generation"
+	@echo "... textures_image_drawing"
+	@echo "... textures_background_scrolling"
+	@echo "... text_rectangle_bounds"
+	@echo "... text_raylib_fonts"
+	@echo "... text_input_box"
+	@echo "... text_format_text"
+	@echo "... text_font_sdf"
+	@echo "... models_loading"
+	@echo "... audio_raw_stream"
+	@echo "... models_first_person_maze"
+	@echo "... shaders_raymarching"
+	@echo "... core_3d_camera_free"
+	@echo "... core_world_screen"
+	@echo "... models_mesh_picking"
+	@echo "... textures_sprite_button"
+	@echo "... models_billboard"
+	@echo "... textures_srcrec_dstrec"
+	@echo "... textures_image_text"
+	@echo "... models_yaw_pitch_roll"
+	@echo "... shaders_eratosthenes"
+	@echo "... core_window_letterbox"
+	@echo "... core_vr_simulator"
+	@echo "... models_rlgl_solar_system"
+	@echo "... core_scissor_test"
+	@echo "... models_heightmap"
+	@echo "... core_random_values"
+	@echo "... models_geometric_shapes"
+	@echo "... shapes_draw_rectangle_rounded"
+	@echo "... shaders_shapes_textures"
+	@echo "... core_loading_thread"
+	@echo "... models_animation"
+	@echo "... core_input_keys"
+	@echo "... core_input_gestures"
+	@echo "... audio_sound_loading"
+	@echo "... audio_module_playing"
+	@echo "... core_input_multitouch"
+	@echo "... text_writing_anim"
+	@echo "... core_input_mouse"
+	@echo "... audio_music_stream"
+	@echo "... core_input_gamepad"
+	@echo "... core_2d_camera"
+	@echo "... core_2d_camera_platformer"
+	@echo "... physics_movement"
+	@echo "... shaders_basic_lighting"
+	@echo "... audio_multichannel_sound"
+	@echo "... core_3d_camera_mode"
+	@echo "... core_drop_files"
+	@echo "... text_font_loading"
+	@echo "... core_basic_window_web"
+	@echo "... models_box_collisions"
+	@echo "... easings_testbed"
+	@echo "... textures_bunnymark"
+	@echo "... models_cubicmap"
+	@echo "... text_font_filters"
+	@echo "... core_input_mouse_wheel"
+	@echo "... rlgl_standalone"
+	@echo "... shapes_rectangle_scaling"
+	@echo "... core_3d_picking"
+	@echo "... shaders_texture_drawing"
+	@echo "... shapes_easings_box_anim"
+	@echo "... core_custom_logging"
+	@echo "... core_basic_window"
+	@echo "... models_mesh_generation"
+	@echo "... text_font_spritefont"
+	@echo "... shapes_lines_bezier"
+	@echo "... shapes_logo_raylib"
+	@echo "... core_3d_camera_first_person"
+	@echo "... models_orthographic_projection"
+	@echo "... shaders_palette_switch"
+	@echo "... physics_shatter"
+	@echo "... physics_friction"
+	@echo "... shapes_colors_palette"
+	@echo "... models_rlgl_full_solar_system"
+	@echo "... core_storage_values"
+	@echo "... shaders_simple_mask"
+	@echo "... models_waving_cubes"
+	@echo "... raudio_standalone"
+	@echo "... models_solar_system"
+	@echo "... shaders_custom_uniform"
+	@echo "... shaders_fog"
+	@echo "... shaders_julia_set"
+	@echo "... models_material_pbr"
+	@echo "... shaders_model_shader"
+	@echo "... shapes_draw_circle_sector"
+	@echo "... shaders_texture_waves"
+	@echo "... models_skybox"
+	@echo "... shaders_postprocessing"
+	@echo "... text_unicode"
+	@echo "... shapes_bouncing_ball"
+	@echo "... shapes_collision_area"
+	@echo "... shapes_draw_ring"
+	@echo "... shapes_basic_shapes"
+	@echo "... shapes_easings_ball_anim"
+	@echo "... shapes_easings_rectangle_array"
+	@echo "... shapes_following_eyes"
+	@echo "... shapes_logo_raylib_anim"
+	@echo "... asteroids_survival"
+	@echo "... floppy"
+	@echo "... arkanoid"
+	@echo "... asteroids"
+	@echo "... space_invaders"
+	@echo "... gorilas"
+	@echo "... missile_commander"
+	@echo "... pang"
+	@echo "... tetris"
+	@echo "... gold_fever"
+	@echo "... snake"
+	@echo "... drturtle"
+	@echo "... just_do"
+	@echo "... koala_seasons"
+	@echo "... light_my_ritual"
+	@echo "... skully_escape"
+	@echo "... wave_collector"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

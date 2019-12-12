@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="wave_collector"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\vendor\;CMake Files\vendor\raylib\;CMake Files\vendor\raylib\src\;CMake Files\vendor\raylib\src\external\;CMake Files\vendor\raylib\src\external\glfw\;CMake Files\vendor\raylib\src\external\glfw\src\;CMake Files\vendor\raylib\games\;CMake Files\vendor\raylib\games\drturtle\;CMake Files\vendor\raylib\games\just_do\;CMake Files\vendor\raylib\games\koala_seasons\;CMake Files\vendor\raylib\games\light_my_ritual\;CMake Files\vendor\raylib\games\skully_escape\;CMake Files\vendor\raylib\games\wave_collector\;CMake Files\vendor\raylib\examples\;CMake Files\vendor\raylib\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="wave_collector">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/wave_collector" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/Makefile&quot;  VERBOSE=1 wave_collector"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="wave_collector/fast">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/wave_collector" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/Makefile&quot;  VERBOSE=1 wave_collector/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/wave_collector/screens/screen_ending.c">
+			<Option target="wave_collector"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/wave_collector/screens/screen_gameplay.c">
+			<Option target="wave_collector"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/wave_collector/screens/screen_logo.c">
+			<Option target="wave_collector"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/wave_collector/screens/screen_title.c">
+			<Option target="wave_collector"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/wave_collector/wave_collector.c">
+			<Option target="wave_collector"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/raylib.pc.in">
+			<Option virtualFolder="CMake Files\vendor\raylib\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\src\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/CMakeOptions.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\src\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/config.h.in">
+			<Option virtualFolder="CMake Files\vendor\raylib\src\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\src\external\glfw\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\src\external\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/src/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\vendor\raylib\src\external\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/src/glfw3Config.cmake.in">
+			<Option virtualFolder="CMake Files\vendor\raylib\src\external\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/src/glfw_config.h.in">
+			<Option virtualFolder="CMake Files\vendor\raylib\src\external\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\games\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/drturtle/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\games\drturtle\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/just_do/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\games\just_do\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/koala_seasons/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\games\koala_seasons\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/light_my_ritual/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\games\light_my_ritual\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/skully_escape/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\games\skully_escape\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/wave_collector/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\games\wave_collector\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/examples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\examples\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/cmake/AddIfFlagCompiles.cmake">
+			<Option virtualFolder="CMake Files\vendor\raylib\cmake\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/cmake/BuildType.cmake">
+			<Option virtualFolder="CMake Files\vendor\raylib\cmake\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/cmake/CheckFileSystemSymlinkSupport.cmake">
+			<Option virtualFolder="CMake Files\vendor\raylib\cmake\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/cmake/EnumOption.cmake">
+			<Option virtualFolder="CMake Files\vendor\raylib\cmake\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/cmake/LibraryPathToLinkerFlags.cmake">
+			<Option virtualFolder="CMake Files\vendor\raylib\cmake\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/cmake/PopulateConfigVariablesLocally.cmake">
+			<Option virtualFolder="CMake Files\vendor\raylib\cmake\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/cmake/raylib-config-version.cmake">
+			<Option virtualFolder="CMake Files\vendor\raylib\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include "include/raylib.h"
+#include <raylib.h>
 
 typedef struct {
     bool mainMenu;

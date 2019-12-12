@@ -1,0 +1,1081 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="games"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\vendor\;CMake Files\vendor\raylib\;CMake Files\vendor\raylib\src\;CMake Files\vendor\raylib\src\external\;CMake Files\vendor\raylib\src\external\glfw\;CMake Files\vendor\raylib\src\external\glfw\src\;CMake Files\vendor\raylib\games\;CMake Files\vendor\raylib\games\drturtle\;CMake Files\vendor\raylib\games\just_do\;CMake Files\vendor\raylib\games\koala_seasons\;CMake Files\vendor\raylib\games\light_my_ritual\;CMake Files\vendor\raylib\games\skully_escape\;CMake Files\vendor\raylib\games\wave_collector\;CMake Files\vendor\raylib\examples\;CMake Files\vendor\raylib\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="asteroids_survival">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/asteroids_survival" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 asteroids_survival"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="asteroids_survival/fast">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/asteroids_survival" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 asteroids_survival/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="floppy">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/floppy" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 floppy"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="floppy/fast">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/floppy" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 floppy/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="arkanoid">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/arkanoid" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 arkanoid"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="arkanoid/fast">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/arkanoid" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 arkanoid/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="asteroids">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/asteroids" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 asteroids"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="asteroids/fast">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/asteroids" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 asteroids/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="space_invaders">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/space_invaders" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 space_invaders"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="space_invaders/fast">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/space_invaders" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 space_invaders/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gorilas">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/gorilas" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 gorilas"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gorilas/fast">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/gorilas" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 gorilas/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="missile_commander">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/missile_commander" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 missile_commander"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="missile_commander/fast">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/missile_commander" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 missile_commander/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pang">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/pang" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 pang"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pang/fast">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/pang" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 pang/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tetris">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/tetris" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 tetris"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tetris/fast">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/tetris" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 tetris/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gold_fever">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/gold_fever" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 gold_fever"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gold_fever/fast">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/gold_fever" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 gold_fever/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="snake">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/snake" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 snake"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="snake/fast">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/snake" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 snake/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="drturtle">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/drturtle/drturtle" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/drturtle"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/drturtle/Makefile&quot;  VERBOSE=1 drturtle"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/drturtle/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/drturtle/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/drturtle/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="drturtle/fast">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/drturtle/drturtle" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/drturtle"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/drturtle/Makefile&quot;  VERBOSE=1 drturtle/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/drturtle/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/drturtle/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/drturtle/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="just_do">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/just_do/just_do" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/just_do"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/just_do/Makefile&quot;  VERBOSE=1 just_do"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/just_do/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/just_do/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/just_do/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="just_do/fast">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/just_do/just_do" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/just_do"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/just_do/Makefile&quot;  VERBOSE=1 just_do/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/just_do/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/just_do/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/just_do/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="koala_seasons">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/koala_seasons/koala_seasons" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/koala_seasons"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/koala_seasons/Makefile&quot;  VERBOSE=1 koala_seasons"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/koala_seasons/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/koala_seasons/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/koala_seasons/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="koala_seasons/fast">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/koala_seasons/koala_seasons" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/koala_seasons"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/koala_seasons/Makefile&quot;  VERBOSE=1 koala_seasons/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/koala_seasons/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/koala_seasons/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/koala_seasons/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="light_my_ritual">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/light_my_ritual/light_my_ritual" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/light_my_ritual"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/light_my_ritual/Makefile&quot;  VERBOSE=1 light_my_ritual"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/light_my_ritual/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/light_my_ritual/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/light_my_ritual/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="light_my_ritual/fast">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/light_my_ritual/light_my_ritual" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/light_my_ritual"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/light_my_ritual/Makefile&quot;  VERBOSE=1 light_my_ritual/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/light_my_ritual/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/light_my_ritual/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/light_my_ritual/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="skully_escape">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/skully_escape/skully_escape" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/skully_escape"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/skully_escape/Makefile&quot;  VERBOSE=1 skully_escape"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/skully_escape/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/skully_escape/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/skully_escape/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="skully_escape/fast">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/skully_escape/skully_escape" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/skully_escape"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/skully_escape/Makefile&quot;  VERBOSE=1 skully_escape/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/skully_escape/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/skully_escape/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/skully_escape/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="wave_collector">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/wave_collector" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/Makefile&quot;  VERBOSE=1 wave_collector"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="wave_collector/fast">
+				<Option output="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/wave_collector" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPLATFORM_DESKTOP"/>
+					<Add option="-DGRAPHICS_API_OPENGL_33"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/src"/>
+					<Add directory="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/Makefile&quot;  VERBOSE=1 wave_collector/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/vendor/raylib/games/wave_collector/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/arkanoid.c">
+			<Option target="arkanoid"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/asteroids.c">
+			<Option target="asteroids"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/asteroids_survival.c">
+			<Option target="asteroids_survival"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/drturtle/06_drturtle_final.c">
+			<Option target="drturtle"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/floppy.c">
+			<Option target="floppy"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/gold_fever.c">
+			<Option target="gold_fever"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/gorilas.c">
+			<Option target="gorilas"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/just_do/just_do.c">
+			<Option target="just_do"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/just_do/screens/screen_level00.c">
+			<Option target="just_do"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/just_do/screens/screen_level01.c">
+			<Option target="just_do"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/just_do/screens/screen_level02.c">
+			<Option target="just_do"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/just_do/screens/screen_level03.c">
+			<Option target="just_do"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/just_do/screens/screen_level04.c">
+			<Option target="just_do"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/just_do/screens/screen_level05.c">
+			<Option target="just_do"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/just_do/screens/screen_level06.c">
+			<Option target="just_do"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/just_do/screens/screen_level07.c">
+			<Option target="just_do"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/just_do/screens/screen_level08.c">
+			<Option target="just_do"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/just_do/screens/screen_level09.c">
+			<Option target="just_do"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/just_do/screens/screen_level10.c">
+			<Option target="just_do"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/just_do/screens/screen_logo.c">
+			<Option target="just_do"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/koala_seasons/koala_seasons.c">
+			<Option target="koala_seasons"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/koala_seasons/screens/screen_ending.c">
+			<Option target="koala_seasons"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/koala_seasons/screens/screen_gameplay.c">
+			<Option target="koala_seasons"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/koala_seasons/screens/screen_logo.c">
+			<Option target="koala_seasons"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/koala_seasons/screens/screen_title.c">
+			<Option target="koala_seasons"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/light_my_ritual/light_my_ritual.c">
+			<Option target="light_my_ritual"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/light_my_ritual/screens/screen_gameplay.c">
+			<Option target="light_my_ritual"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/light_my_ritual/screens/screen_logo_raylib.c">
+			<Option target="light_my_ritual"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/light_my_ritual/screens/screen_title.c">
+			<Option target="light_my_ritual"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/missile_commander.c">
+			<Option target="missile_commander"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/pang.c">
+			<Option target="pang"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/skully_escape/monster.c">
+			<Option target="skully_escape"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/skully_escape/monster.h">
+			<Option target="skully_escape"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/skully_escape/player.c">
+			<Option target="skully_escape"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/skully_escape/player.h">
+			<Option target="skully_escape"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/skully_escape/screens/screen_aisle01.c">
+			<Option target="skully_escape"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/skully_escape/screens/screen_aisle02.c">
+			<Option target="skully_escape"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/skully_escape/screens/screen_armory.c">
+			<Option target="skully_escape"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/skully_escape/screens/screen_attic.c">
+			<Option target="skully_escape"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/skully_escape/screens/screen_bathroom.c">
+			<Option target="skully_escape"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/skully_escape/screens/screen_ending.c">
+			<Option target="skully_escape"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/skully_escape/screens/screen_kitchen.c">
+			<Option target="skully_escape"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/skully_escape/screens/screen_livingroom.c">
+			<Option target="skully_escape"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/skully_escape/screens/screen_logo.c">
+			<Option target="skully_escape"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/skully_escape/screens/screen_logo_raylib.c">
+			<Option target="skully_escape"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/skully_escape/screens/screen_title.c">
+			<Option target="skully_escape"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/skully_escape/skully_escape.c">
+			<Option target="skully_escape"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/snake.c">
+			<Option target="snake"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/space_invaders.c">
+			<Option target="space_invaders"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/tetris.c">
+			<Option target="tetris"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/wave_collector/screens/screen_ending.c">
+			<Option target="wave_collector"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/wave_collector/screens/screen_gameplay.c">
+			<Option target="wave_collector"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/wave_collector/screens/screen_logo.c">
+			<Option target="wave_collector"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/wave_collector/screens/screen_title.c">
+			<Option target="wave_collector"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/wave_collector/wave_collector.c">
+			<Option target="wave_collector"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/raylib.pc.in">
+			<Option virtualFolder="CMake Files\vendor\raylib\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\src\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/CMakeOptions.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\src\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/config.h.in">
+			<Option virtualFolder="CMake Files\vendor\raylib\src\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\src\external\glfw\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\src\external\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/src/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\vendor\raylib\src\external\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/src/glfw3Config.cmake.in">
+			<Option virtualFolder="CMake Files\vendor\raylib\src\external\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/src/external/glfw/src/glfw_config.h.in">
+			<Option virtualFolder="CMake Files\vendor\raylib\src\external\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\games\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/drturtle/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\games\drturtle\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/just_do/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\games\just_do\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/koala_seasons/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\games\koala_seasons\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/light_my_ritual/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\games\light_my_ritual\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/skully_escape/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\games\skully_escape\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/games/wave_collector/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\games\wave_collector\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/examples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\raylib\examples\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/cmake/AddIfFlagCompiles.cmake">
+			<Option virtualFolder="CMake Files\vendor\raylib\cmake\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/cmake/BuildType.cmake">
+			<Option virtualFolder="CMake Files\vendor\raylib\cmake\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/cmake/CheckFileSystemSymlinkSupport.cmake">
+			<Option virtualFolder="CMake Files\vendor\raylib\cmake\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/cmake/EnumOption.cmake">
+			<Option virtualFolder="CMake Files\vendor\raylib\cmake\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/cmake/LibraryPathToLinkerFlags.cmake">
+			<Option virtualFolder="CMake Files\vendor\raylib\cmake\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/cmake/PopulateConfigVariablesLocally.cmake">
+			<Option virtualFolder="CMake Files\vendor\raylib\cmake\"/>
+		</Unit>
+		<Unit filename="/home/giovani/CLionProjects/simple_plataform_raylib/vendor/raylib/cmake/raylib-config-version.cmake">
+			<Option virtualFolder="CMake Files\vendor\raylib\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

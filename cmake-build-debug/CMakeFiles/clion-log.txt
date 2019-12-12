@@ -1,4 +1,17 @@
 /home/giovani/clion-2019.3.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/giovani/CLionProjects/simple_plataform_raylib
+-- Testing if -Werror=pointer-arith can be used -- compiles
+-- Testing if -Werror=implicit-function-declaration can be used -- compiles
+-- Testing if -fno-strict-aliasing can be used -- compiles
+-- Testing if file system supports symlinks
+-- Testing if file system supports symlinks -- supported
+-- Using raylib's GLFW
+-- Using X11 for window creation
+-- Audio Backend: miniaudio
+-- Building raylib static library
+-- Compiling with the flags:
+--   PLATFORM=PLATFORM_DESKTOP
+--   GRAPHICS=GRAPHICS_API_OPENGL_33
+-- Testing if -std=c11 can be used -- compiles
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug

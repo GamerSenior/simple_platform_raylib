@@ -1,0 +1,3 @@
+/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/CMakeFiles/simple_plataform_raylib.dir
+/home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug/CMakeFiles/edit_cache.dir

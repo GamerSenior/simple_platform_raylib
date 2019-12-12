@@ -1,0 +1,4 @@
+/home/giovani/clion-2019.3.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/giovani/CLionProjects/simple_plataform_raylib
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/giovani/CLionProjects/simple_plataform_raylib/cmake-build-debug

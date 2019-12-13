@@ -137,14 +137,13 @@ void InputHandler(World *world) {
         }
     }
     if (world->isPlaying) {
+        /* TODO Think about how to handle PLAYER movement
+         * maybe keep the player entity globally stored?
+        */
         if (IsKeyDown(KEY_DOWN)) {
-            player->position.y += player->speed;
         } else if (IsKeyDown(KEY_UP)) {
-            player->position.y -= player->speed;
         } else if (IsKeyDown(KEY_LEFT)) {
-            player->position.x -= player->speed;
         } else if (IsKeyDown(KEY_RIGHT)) {
-            player->position.x += player->speed;
         }
     }
 }

@@ -1,1 +1,0 @@
-/usr/bin/cc -std=c11 -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g  -rdynamic CMakeFiles/textures_sprite_explosion.dir/textures/textures_sprite_explosion.c.o  -o textures_sprite_explosion -lpthread ../src/libraylib.a ../src/external/glfw/src/libglfw3.a -lrt -lm -ldl -lX11 -lpthread -lm -lpthread -lGL -lGLU 

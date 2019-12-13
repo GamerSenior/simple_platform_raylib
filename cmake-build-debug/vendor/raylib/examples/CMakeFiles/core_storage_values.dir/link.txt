@@ -1,1 +1,0 @@
-/usr/bin/cc -std=c11 -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g  -rdynamic CMakeFiles/core_storage_values.dir/core/core_storage_values.c.o  -o core_storage_values -lpthread ../src/libraylib.a ../src/external/glfw/src/libglfw3.a -lrt -lm -ldl -lX11 -lpthread -lm -lpthread -lGL -lGLU 

@@ -1,1 +1,0 @@
-/usr/bin/cc -std=c11 -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g  -rdynamic CMakeFiles/shapes_easings_ball_anim.dir/shapes/shapes_easings_ball_anim.c.o  -o shapes_easings_ball_anim -lpthread ../src/libraylib.a ../src/external/glfw/src/libglfw3.a -lrt -lm -ldl -lX11 -lpthread -lm -lpthread -lGL -lGLU 

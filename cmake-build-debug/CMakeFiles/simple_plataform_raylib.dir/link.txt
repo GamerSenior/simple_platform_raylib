@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/simple_plataform_raylib.dir/main.c.o  -o simple_plataform_raylib 

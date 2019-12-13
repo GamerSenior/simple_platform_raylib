@@ -20,6 +20,7 @@ int main() {
 
     SetTargetFPS(60);
     // Main loop
+    printf("Entering Main Loop");
     while (!WindowShouldClose()) {
         InputHandler(&world);
     }

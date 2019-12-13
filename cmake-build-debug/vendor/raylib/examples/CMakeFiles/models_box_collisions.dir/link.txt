@@ -1,1 +1,0 @@
-/usr/bin/cc -std=c11 -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g  -rdynamic CMakeFiles/models_box_collisions.dir/models/models_box_collisions.c.o  -o models_box_collisions -lpthread ../src/libraylib.a ../src/external/glfw/src/libglfw3.a -lrt -lm -ldl -lX11 -lpthread -lm -lpthread -lGL -lGLU 

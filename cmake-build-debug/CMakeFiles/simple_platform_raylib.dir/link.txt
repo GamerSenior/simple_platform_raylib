@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/simple_platform_raylib.dir/main.c.o  -o simple_platform_raylib vendor/raylib/src/libraylib.a vendor/raylib/src/external/glfw/src/libglfw3.a /usr/lib/x86_64-linux-gnu/librt.so -lm -ldl /usr/lib/x86_64-linux-gnu/libX11.so -lpthread -lm -lpthread /usr/lib/x86_64-linux-gnu/libGL.so /usr/lib/x86_64-linux-gnu/libGLU.so 

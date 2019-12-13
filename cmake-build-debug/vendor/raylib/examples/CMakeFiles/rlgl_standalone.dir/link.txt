@@ -1,1 +1,0 @@
-/usr/bin/cc -std=c11 -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g  -rdynamic CMakeFiles/rlgl_standalone.dir/others/rlgl_standalone.c.o  -o rlgl_standalone -lpthread ../src/external/glfw/src/libglfw3.a -lm -lpthread -lGL -lGLU -lrt -lm -ldl -lX11 -lpthread 

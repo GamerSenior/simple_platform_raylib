@@ -27,6 +27,8 @@ typedef struct {
     bool isPaused;
     bool isPlaying;
     int menuOption;
+    
+    unsigned playerEntity;
 
     int mask[ENTITY_COUNT];
     PositionComponent positionComponent[ENTITY_COUNT];
@@ -43,8 +45,9 @@ typedef struct {
 void InputHandler(World *world);
 unsigned createEntity(World *world);
 void destroyEntity(World *world, unsigned entity);
-void movementSystem(World *world);
 unsigned createPlayer(World *world);
+void MovementSystem(World *world);
+void RenderSystem(World *ptr);
 
 int main() {
     const int screenWidth = 800;
@@ -54,22 +57,25 @@ int main() {
 
     // Initializing structures
     World world = {false,false,true,0,};
-    unsigned playerEntity = createPlayer(&world);
+    world.playerEntity = createPlayer(&world);
     // ----------------------------------------------------
 
 
     // Main loop
     printf("Entering Main Loop");
+
     while (!WindowShouldClose()) {
 
         // Update
         InputHandler(&world);
         //----------------------------------------------
 
+        MovementSystem(&world);
+
         // Rendering
         BeginDrawing();
-
         // Draw player
+        RenderSystem(&world);
 
         ClearBackground(RAYWHITE);
         EndDrawing();
@@ -78,6 +84,17 @@ int main() {
 
     CloseWindow();
     return 0;
+}
+
+void RenderSystem(World *world) {
+    for (unsigned entity = 0; entity < ENTITY_COUNT; entity++) {
+        if ((world->mask[entity] & RENDER_MASK) == RENDER_MASK) {
+            RenderableComponent renderable = world->renderComponent[entity];
+            Vector2 position = renderable.renderPosition;
+            Vector2 size = renderable.renderSize;
+            DrawRectangle(position.x, position.y, size.x, size.y, BLACK);
+        }
+    }
 }
 
 unsigned createEntity(World *world) {
@@ -100,6 +117,8 @@ unsigned createPlayer(World *world) {
     world->velocityComponent[entity].y = 0;
     world->renderComponent[entity].renderPosition.x = 50;
     world->renderComponent[entity].renderPosition.y = 50;
+    world->renderComponent[entity].renderSize.x = 50;
+    world->renderComponent[entity].renderSize.y = 50;
     return entity;
 }
 
@@ -107,7 +126,7 @@ void destroyEntity(World *world, unsigned entity) {
     world->mask[entity] = COMPONENT_NONE;
 }
 
-void movementSystem(World *world) {
+void MovementSystem(World *world) {
     unsigned entity;
     PositionComponent *position;
     VelocityComponent *velocity;
@@ -140,10 +159,14 @@ void InputHandler(World *world) {
         /* TODO Think about how to handle PLAYER movement
          * maybe keep the player entity globally stored?
         */
+
+        VelocityComponent *playerVelocity = &world->velocityComponent[world->playerEntity];
         if (IsKeyDown(KEY_DOWN)) {
         } else if (IsKeyDown(KEY_UP)) {
         } else if (IsKeyDown(KEY_LEFT)) {
+            playerVelocity->x = -5;
         } else if (IsKeyDown(KEY_RIGHT)) {
+            playerVelocity->x = 5;
         }
     }
 }

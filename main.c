@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <raylib.h>
-#include <chipmunk.h>
+#include "vendor/Chipmunk2D/include/chipmunk/chipmunk.h"
 
 #define ENTITY_COUNT 100
 
@@ -12,17 +12,23 @@ typedef struct {
     Vector2 renderSize;
 } RenderableComponent;
 
+typedef struct {
+    cpShape *shape;
+    cpBody *body;
+} PhysicsComponent;
+
 typedef enum {
     COMPONENT_NONE = 0,
     COMPONENT_POSITION = 1 << 0,
     COMPONENT_VELOCITY = 2 << 1,
     COMPONENT_RENDER = 3 << 2,
     COMPONENT_PLAYER = 4 << 3,
+    COMPONENT_PHYSICS = 5 << 4
 } Component;
 
 #define MOVEMENT_MASK (COMPONENT_POSITION | COMPONENT_VELOCITY)
 #define RENDER_MASK (COMPONENT_RENDER)
-#define PLAYER_MASK (COMPONENT_RENDER | COMPONENT_POSITION | COMPONENT_VELOCITY)
+#define PLAYER_MASK (COMPONENT_RENDER | COMPONENT_POSITION | COMPONENT_VELOCITY | COMPONENT_PHYSICS)
 
 typedef struct {
     bool mainMenu;
@@ -32,10 +38,14 @@ typedef struct {
     
     unsigned playerEntity;
 
+    cpSpace *space;
+    cpFloat timeStep;
+
     int mask[ENTITY_COUNT];
     PositionComponent positionComponent[ENTITY_COUNT];
     VelocityComponent velocityComponent[ENTITY_COUNT];
     RenderableComponent renderComponent[ENTITY_COUNT];
+    PhysicsComponent physicsComponent[ENTITY_COUNT];
 } World;
 
 typedef struct {
@@ -45,11 +55,17 @@ typedef struct {
 } Player;
 
 void InputHandler(World *world);
-unsigned createEntity(World *world);
-void destroyEntity(World *world, unsigned entity);
-unsigned createPlayer(World *world);
+unsigned CreateEntity(World *world);
+void DestroyEntity(World *world, unsigned entity);
+unsigned CreatePlayer(World *world);
 void MovementSystem(World *world);
 void RenderSystem(World *ptr);
+
+void CreateSpace(World *world);
+
+void DestroyEntities(World *world);
+
+void PhysicsSystem(World *world);
 
 int main() {
     const int screenWidth = 800;
@@ -59,13 +75,15 @@ int main() {
 
     // Initializing structures
     World world = {false,false,true,0,};
-    world.playerEntity = createPlayer(&world);
+    CreateSpace(&world);
+    world.playerEntity = CreatePlayer(&world);
     // ----------------------------------------------------
 
 
     // Main loop
     printf("Entering Main Loop");
 
+    world.timeStep = 1.0 / 60.0;
     while (!WindowShouldClose()) {
 
         // Update
@@ -77,6 +95,7 @@ int main() {
         // Rendering
         BeginDrawing();
         // Draw player
+        PhysicsSystem(&world);
         RenderSystem(&world);
 
         ClearBackground(RAYWHITE);
@@ -84,8 +103,37 @@ int main() {
         // ---------------------------------------------
     }
 
+    DestroyEntities(&world);
+
     CloseWindow();
     return 0;
+}
+
+void PhysicsSystem(World *world) {
+    cpSpaceStep(world->space, world->timeStep);
+
+    for (unsigned i = 0; i < ENTITY_COUNT; i++) {
+        if ((world->mask[i] & COMPONENT_PHYSICS) == COMPONENT_PHYSICS) {
+            PhysicsComponent component = world->physicsComponent[i];
+            cpVect position = cpBodyGetPosition(component.body);
+            printf("Position: X: %f Y: %f", position.x, position.y);
+        }
+    }
+}
+
+void CreateSpace(World *world) {
+    world->space = cpSpaceNew();
+
+    cpVect gravity = cpv(0, -100);
+    cpSpaceSetGravity(world->space, gravity);
+
+    // Create simple line to test gravity and colision
+    unsigned int groundEntity = CreateEntity(world);
+    cpShape *ground = cpSegmentShapeNew(cpSpaceGetStaticBody(world->space), cpv(-20, 5), cpv(20, -5), 0);
+    cpShapeSetFriction(ground, 1);
+    cpSpaceAddShape(world->space, ground);
+    world->mask[groundEntity] = (COMPONENT_PHYSICS | COMPONENT_RENDER);
+    world->physicsComponent[groundEntity].shape = ground;
 }
 
 void RenderSystem(World *world) {
@@ -99,7 +147,7 @@ void RenderSystem(World *world) {
     }
 }
 
-unsigned createEntity(World *world) {
+unsigned CreateEntity(World *world) {
     unsigned entity;
     for (entity = 0; entity < ENTITY_COUNT; entity++) {
         if (world->mask[entity] == COMPONENT_NONE) {
@@ -110,8 +158,8 @@ unsigned createEntity(World *world) {
     return ENTITY_COUNT;
 }
 
-unsigned createPlayer(World *world) {
-    unsigned entity = createEntity(world);
+unsigned CreatePlayer(World *world) {
+    unsigned entity = CreateEntity(world);
     world->mask[entity] = PLAYER_MASK;
     world->positionComponent[entity].x = 50;
     world->positionComponent[entity].y = 50;
@@ -121,11 +169,36 @@ unsigned createPlayer(World *world) {
     world->renderComponent[entity].renderPosition.y = 50;
     world->renderComponent[entity].renderSize.x = 50;
     world->renderComponent[entity].renderSize.y = 50;
+
+    // Create body and shape for Physics
+    cpSpace *space = world->space;
+    cpFloat mass = 1;
+    cpFloat moment = cpMomentForBox(mass, 1, 1);
+    cpBody *body = cpSpaceAddBody(space, cpBodyNew(mass, moment));
+    cpBodySetPosition(body, cpv(0, 15));
+
+    cpShape *shape = cpSpaceAddShape(space, cpBoxShapeNew(body, 1, 1, 0));
+    cpShapeSetFriction(shape, 0.7);
+
+    world->physicsComponent[entity].body = body;
+    world->physicsComponent[entity].shape = shape;
+
     return entity;
 }
 
-void destroyEntity(World *world, unsigned entity) {
+void DestroyEntity(World *world, unsigned entity) {
+    if ((world->mask[entity] & COMPONENT_PHYSICS) == COMPONENT_PHYSICS) {
+        PhysicsComponent component = world->physicsComponent[entity];
+        cpShapeFree(component.shape);
+        cpBodyFree(component.body);
+    }
     world->mask[entity] = COMPONENT_NONE;
+}
+
+void DestroyEntities(World *world) {
+    for (unsigned i = 0; i < ENTITY_COUNT; i++) {
+        DestroyEntity(world, i);
+    }
 }
 
 void MovementSystem(World *world) {

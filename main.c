@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <raylib.h>
+#include <chipmunk.h>
+
 #define ENTITY_COUNT 100
 
 typedef Vector2 PositionComponent;
@@ -130,13 +132,17 @@ void MovementSystem(World *world) {
     unsigned entity;
     PositionComponent *position;
     VelocityComponent *velocity;
+    RenderableComponent  *renderable;
     for (entity = 0; entity < ENTITY_COUNT; entity++) {
         if ((world->mask[entity] & MOVEMENT_MASK) == MOVEMENT_MASK) {
             position = &world->positionComponent[entity];
             velocity = &world->velocityComponent[entity];
+            renderable = &world->renderComponent[entity];
 
             position->x += velocity->x;
             position->y += velocity->y;
+            renderable->renderPosition.x += velocity->x;
+            renderable->renderPosition.y += velocity->y;
         }
     }
 }
@@ -167,6 +173,13 @@ void InputHandler(World *world) {
             playerVelocity->x = -5;
         } else if (IsKeyDown(KEY_RIGHT)) {
             playerVelocity->x = 5;
+        } else {
+            if (playerVelocity->x > 0) {
+                playerVelocity->x -= 1;
+            }
+            if (playerVelocity->x < 0) {
+                playerVelocity->x += 1;
+            }
         }
     }
 }

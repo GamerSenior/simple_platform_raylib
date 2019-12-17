@@ -1,3 +1,6 @@
 [submodule "vendor/raylib"]
 	path = vendor/raylib
 	url = https://github.com/raysan5/raylib.git
+[submodule "vendor/Chipmunk2D"]
+	path = vendor/Chipmunk2D
+	url = https://github.com/slembcke/Chipmunk2D.git

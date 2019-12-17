@@ -3,5 +3,6 @@ project(simple_plataform_raylib C)
 
 set(CMAKE_C_STANDARD 11)
 add_subdirectory("vendor/raylib")
+add_subdirectory("vendor/Chipmunk2D")
 add_executable(simple_platform_raylib main.c)
-target_link_libraries(simple_platform_raylib PRIVATE raylib)
+target_link_libraries(simple_platform_raylib PRIVATE raylib chipmunk)

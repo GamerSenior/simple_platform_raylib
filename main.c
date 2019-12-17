@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <raylib.h>
 #include "vendor/Chipmunk2D/include/chipmunk/chipmunk.h"
+#include "matrix.c"
 
 #define ENTITY_COUNT 100
 
@@ -115,8 +116,19 @@ void PhysicsSystem(World *world) {
     for (unsigned i = 0; i < ENTITY_COUNT; i++) {
         if ((world->mask[i] & COMPONENT_PHYSICS) == COMPONENT_PHYSICS) {
             PhysicsComponent component = world->physicsComponent[i];
-            cpVect position = cpBodyGetPosition(component.body);
-            printf("Position: X: %f Y: %f", position.x, position.y);
+            if (component.body) {
+                cpVect position = cpBodyGetPosition(component.body);
+                printf("Entity[%d] Position: X: %f Y: %f\n", i, position.x, position.y);
+
+                if ((world->mask[i] & COMPONENT_RENDER) == COMPONENT_RENDER) {
+                    RenderableComponent *render = &world->renderComponent[i];
+                    cpVect from = {render->renderPosition.x, render->renderPosition.y};
+                    cpVect to = {-1, -1};
+                    cpVect translatedVec = translateVector(from, to);
+                    render->renderPosition.x = translatedVec.x;
+                    render->renderPosition.y = translatedVec.y;
+                }
+            }
         }
     }
 }

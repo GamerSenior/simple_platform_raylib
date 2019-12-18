@@ -15,13 +15,14 @@ cpVect translateVector(cpVect from, cpVect to) {
             1
     };
     cpFloat result[1][3];
-    cpFloat sum = 0;
-    for (int i = 0; i < 3; i++) {
+
+    for (int i = 0; i < 1; i++) {
         for (int j = 0; j < 3; j++) {
-            sum = sum + transMatrix[i][j] * fromVector[0][i];
+            for (int k = 0; k < 3; k++) {
+                result[i][j] += fromVector[i][k] * transMatrix[k][j];
+            }
         }
-        result[0][i] = sum;
-        sum = 0;
     }
+
     return (cpVect) {result[0][0], result[0][1]};
 }

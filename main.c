@@ -2,7 +2,7 @@
 #include <stdbool.h>
 #include <raylib.h>
 #include "vendor/Chipmunk2D/include/chipmunk/chipmunk.h"
-#include "matrix.c"
+#include "matrix.h"
 
 #define ENTITY_COUNT 100
 
@@ -59,13 +59,10 @@ void InputHandler(World *world);
 unsigned CreateEntity(World *world);
 void DestroyEntity(World *world, unsigned entity);
 unsigned CreatePlayer(World *world);
+void CreateSpace(World *world);
+void DestroyEntities(World *world);
 void MovementSystem(World *world);
 void RenderSystem(World *ptr);
-
-void CreateSpace(World *world);
-
-void DestroyEntities(World *world);
-
 void PhysicsSystem(World *world);
 
 int main() {
@@ -110,29 +107,6 @@ int main() {
     return 0;
 }
 
-void PhysicsSystem(World *world) {
-    cpSpaceStep(world->space, world->timeStep);
-
-    for (unsigned i = 0; i < ENTITY_COUNT; i++) {
-        if ((world->mask[i] & COMPONENT_PHYSICS) == COMPONENT_PHYSICS) {
-            PhysicsComponent component = world->physicsComponent[i];
-            if (component.body) {
-                cpVect position = cpBodyGetPosition(component.body);
-                printf("Entity[%d] Position: X: %f Y: %f\n", i, position.x, position.y);
-
-                if ((world->mask[i] & COMPONENT_RENDER) == COMPONENT_RENDER) {
-                    RenderableComponent *render = &world->renderComponent[i];
-                    cpVect from = {render->renderPosition.x, render->renderPosition.y};
-                    cpVect to = {-1, -1};
-                    cpVect translatedVec = translateVector(from, to);
-                    render->renderPosition.x = translatedVec.x;
-                    render->renderPosition.y = translatedVec.y;
-                }
-            }
-        }
-    }
-}
-
 void CreateSpace(World *world) {
     world->space = cpSpaceNew();
 
@@ -155,6 +129,60 @@ void RenderSystem(World *world) {
             Vector2 position = renderable.renderPosition;
             Vector2 size = renderable.renderSize;
             DrawRectangle(position.x, position.y, size.x, size.y, BLACK);
+        }
+    }
+}
+
+void PhysicsSystem(World *world) {
+    cpSpaceStep(world->space, world->timeStep);
+
+    for (unsigned i = 0; i < ENTITY_COUNT; i++) {
+        if ((world->mask[i] & COMPONENT_PHYSICS) == COMPONENT_PHYSICS) {
+            PhysicsComponent component = world->physicsComponent[i];
+            if (component.body) {
+                cpVect position = cpBodyGetPosition(component.body);
+
+                VelocityComponent velocity = world->velocityComponent[i];
+                cpBodySetForce(component.body, cpv(velocity.x, velocity.y));
+
+                printf("Entity[%d] Position: X: %f Y: %f\n", i, position.x, position.y);
+                if ((world->mask[i] & COMPONENT_RENDER) == COMPONENT_RENDER) {
+                    RenderableComponent *render = &world->renderComponent[i];
+                    cpVect from = {position.x, position.y};
+                    cpVect to = {-1, -1};
+                    cpVect translatedVec = translateVector(from, to);
+                    render->renderPosition.x = translatedVec.x;
+                    render->renderPosition.y = translatedVec.y;
+                    printf("Render[%d] Position: X: %f Y: %f\n", i, translatedVec.x, translatedVec.y);
+                }
+            }
+        }
+    }
+}
+
+void InputHandler(World *world) {
+    if (world->mainMenu) {
+        if (IsKeyDown(KEY_DOWN)) {
+            if (world->menuOption != 0) {
+                world->menuOption++;
+                printf("%d\n", world->menuOption);
+            }
+        } else if (IsKeyDown(KEY_UP)) {
+            if (world->menuOption < 5) {
+                world->menuOption--;
+                printf("%d\n", world->menuOption);
+            }
+        }
+    }
+    if (world->isPlaying) {
+        cpBody *body = world->physicsComponent[world->playerEntity].body;
+        if (IsKeyDown(KEY_DOWN)) {
+        } else if (IsKeyDown(KEY_UP)) {
+        } else if (IsKeyDown(KEY_LEFT)) {
+            cpBodySetForce(body, cpv(-20, 0));
+        } else if (IsKeyDown(KEY_RIGHT)) {
+            cpBodySetForce(body, cpv(20, 0));
+        } else {
         }
     }
 }
@@ -228,43 +256,6 @@ void MovementSystem(World *world) {
             position->y += velocity->y;
             renderable->renderPosition.x += velocity->x;
             renderable->renderPosition.y += velocity->y;
-        }
-    }
-}
-
-void InputHandler(World *world) {
-    if (world->mainMenu) {
-        if (IsKeyDown(KEY_DOWN)) {
-            if (world->menuOption != 0) {
-                world->menuOption++;
-                printf("%d\n", world->menuOption);
-            }
-        } else if (IsKeyDown(KEY_UP)) {
-            if (world->menuOption < 5) {
-                world->menuOption--;
-                printf("%d\n", world->menuOption);
-            }
-        }
-    }
-    if (world->isPlaying) {
-        /* TODO Think about how to handle PLAYER movement
-         * maybe keep the player entity globally stored?
-        */
-
-        VelocityComponent *playerVelocity = &world->velocityComponent[world->playerEntity];
-        if (IsKeyDown(KEY_DOWN)) {
-        } else if (IsKeyDown(KEY_UP)) {
-        } else if (IsKeyDown(KEY_LEFT)) {
-            playerVelocity->x = -5;
-        } else if (IsKeyDown(KEY_RIGHT)) {
-            playerVelocity->x = 5;
-        } else {
-            if (playerVelocity->x > 0) {
-                playerVelocity->x -= 1;
-            }
-            if (playerVelocity->x < 0) {
-                playerVelocity->x += 1;
-            }
         }
     }
 }

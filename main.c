@@ -2,7 +2,6 @@
 #include <stdbool.h>
 #include <raylib.h>
 #include "vendor/Chipmunk2D/include/chipmunk/chipmunk.h"
-#include "matrix.h"
 
 #define ENTITY_COUNT 100
 
@@ -146,15 +145,6 @@ void PhysicsSystem(World *world) {
                 cpBodySetForce(component.body, cpv(velocity.x, velocity.y));
 
                 printf("Entity[%d] Position: X: %f Y: %f\n", i, position.x, position.y);
-                if ((world->mask[i] & COMPONENT_RENDER) == COMPONENT_RENDER) {
-                    RenderableComponent *render = &world->renderComponent[i];
-                    cpVect from = {position.x, position.y};
-                    cpVect to = {-1, -1};
-                    cpVect translatedVec = translateVector(from, to);
-                    render->renderPosition.x = translatedVec.x;
-                    render->renderPosition.y = translatedVec.y;
-                    printf("Render[%d] Position: X: %f Y: %f\n", i, translatedVec.x, translatedVec.y);
-                }
             }
         }
     }

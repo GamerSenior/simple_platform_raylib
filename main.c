@@ -2,29 +2,9 @@
 #include <stdbool.h>
 #include <raylib.h>
 #include "vendor/Chipmunk2D/include/chipmunk/chipmunk.h"
+#include "components.h"
 
 #define ENTITY_COUNT 100
-
-typedef Vector2 PositionComponent;
-typedef Vector2 VelocityComponent;
-typedef struct {
-    Vector2 renderPosition;
-    Vector2 renderSize;
-} RenderableComponent;
-
-typedef struct {
-    cpShape *shape;
-    cpBody *body;
-} PhysicsComponent;
-
-typedef enum {
-    COMPONENT_NONE = 0,
-    COMPONENT_POSITION = 1 << 0,
-    COMPONENT_VELOCITY = 2 << 1,
-    COMPONENT_RENDER = 3 << 2,
-    COMPONENT_PLAYER = 4 << 3,
-    COMPONENT_PHYSICS = 5 << 4
-} Component;
 
 #define MOVEMENT_MASK (COMPONENT_POSITION | COMPONENT_VELOCITY)
 #define RENDER_MASK (COMPONENT_RENDER)
@@ -91,9 +71,9 @@ int main() {
 
         // Rendering
         BeginDrawing();
-        // Draw player
+        
         PhysicsSystem(&world);
-        RenderSystem(&world);
+        // RenderSystem(&world);
 
         ClearBackground(RAYWHITE);
         EndDrawing();

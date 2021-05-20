@@ -12,7 +12,7 @@ If already cloned, update submodules with:
 Create build directory and configure the project:
 
 ```
-mkdir build && cd build`
+mkdir build && cd build
 cmake ../
 ```
 

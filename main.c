@@ -34,7 +34,7 @@ typedef struct {
     float speed;
 } Player;
 
-void InputHandler(World *world);
+void ControllerSystem(World *world);
 unsigned CreateEntity(World *world);
 void DestroyEntity(World *world, unsigned entity);
 unsigned CreatePlayer(World *world);
@@ -63,11 +63,9 @@ int main() {
     world.timeStep = 1.0 / 60.0;
     while (!WindowShouldClose()) {
 
-        // Update
-        InputHandler(&world);
+        // Input handler
+        ControllerSystem(&world);
         //----------------------------------------------
-
-        MovementSystem(&world);
 
         // Rendering
         BeginDrawing();
@@ -94,7 +92,7 @@ void CreateSpace(World *world) {
 
     // Create simple line to test gravity and colision
     unsigned int groundEntity = CreateEntity(world);
-    cpShape *ground = cpSegmentShapeNew(cpSpaceGetStaticBody(world->space), cpv(-20, 5), cpv(20, -5), 0);
+    cpShape *ground = cpSegmentShapeNew(cpSpaceGetStaticBody(world->space), cpv(0, 0), cpv(100, 0), 0);
     cpShapeSetFriction(ground, 1);
     cpSpaceAddShape(world->space, ground);
     world->mask[groundEntity] = (COMPONENT_PHYSICS | COMPONENT_RENDER);
@@ -130,7 +128,7 @@ void PhysicsSystem(World *world) {
     }
 }
 
-void InputHandler(World *world) {
+void ControllerSystem(World *world) {
     if (world->mainMenu) {
         if (IsKeyDown(KEY_DOWN)) {
             if (world->menuOption != 0) {
@@ -145,14 +143,15 @@ void InputHandler(World *world) {
         }
     }
     if (world->isPlaying) {
-        cpBody *body = world->physicsComponent[world->playerEntity].body;
+        VelocityComponent *playerVelocity = &(world->velocityComponent[world->playerEntity]);
         if (IsKeyDown(KEY_DOWN)) {
         } else if (IsKeyDown(KEY_UP)) {
         } else if (IsKeyDown(KEY_LEFT)) {
-            cpBodySetForce(body, cpv(-20, 0));
+            playerVelocity->x = -60;
         } else if (IsKeyDown(KEY_RIGHT)) {
-            cpBodySetForce(body, cpv(20, 0));
+            playerVelocity->x = 60;
         } else {
+            playerVelocity->x = 0;
         }
     }
 }
@@ -171,8 +170,8 @@ unsigned CreateEntity(World *world) {
 unsigned CreatePlayer(World *world) {
     unsigned entity = CreateEntity(world);
     world->mask[entity] = PLAYER_MASK;
-    world->positionComponent[entity].x = 50;
-    world->positionComponent[entity].y = 50;
+    world->positionComponent[entity].x = 10;
+    world->positionComponent[entity].y = 10;
     world->velocityComponent[entity].x = 0;
     world->velocityComponent[entity].y = 0;
     world->renderComponent[entity].renderPosition.x = 50;
@@ -185,10 +184,10 @@ unsigned CreatePlayer(World *world) {
     cpFloat mass = 1;
     cpFloat moment = cpMomentForBox(mass, 1, 1);
     cpBody *body = cpSpaceAddBody(space, cpBodyNew(mass, moment));
-    cpBodySetPosition(body, cpv(0, 15));
+    cpBodySetPosition(body, cpv(10, 10));
 
     cpShape *shape = cpSpaceAddShape(space, cpBoxShapeNew(body, 1, 1, 0));
-    cpShapeSetFriction(shape, 0.7);
+    cpShapeSetFriction(shape, 0.3);
 
     world->physicsComponent[entity].body = body;
     world->physicsComponent[entity].shape = shape;
@@ -208,24 +207,5 @@ void DestroyEntity(World *world, unsigned entity) {
 void DestroyEntities(World *world) {
     for (unsigned i = 0; i < ENTITY_COUNT; i++) {
         DestroyEntity(world, i);
-    }
-}
-
-void MovementSystem(World *world) {
-    unsigned entity;
-    PositionComponent *position;
-    VelocityComponent *velocity;
-    RenderableComponent  *renderable;
-    for (entity = 0; entity < ENTITY_COUNT; entity++) {
-        if ((world->mask[entity] & MOVEMENT_MASK) == MOVEMENT_MASK) {
-            position = &world->positionComponent[entity];
-            velocity = &world->velocityComponent[entity];
-            renderable = &world->renderComponent[entity];
-
-            position->x += velocity->x;
-            position->y += velocity->y;
-            renderable->renderPosition.x += velocity->x;
-            renderable->renderPosition.y += velocity->y;
-        }
     }
 }
